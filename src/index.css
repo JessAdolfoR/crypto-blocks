@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Porcine Bosk';
+  src: url('../src/fonts/Porcine-Bosk.eot');
+  src: local('../src/fonts/Porcine Bosk'), local('Porcine-Bosk'),
+      url('../src/fonts/Porcine-Bosk.eot?#iefix') format('embedded-opentype'),
+      url('../src/fonts/Porcine-Bosk.woff2') format('woff2'),
+      url('../src/fonts/Porcine-Bosk.woff') format('woff'),
+      url('../src/fonts/Porcine-Bosk.ttf') format('truetype'),
+      url('../src/fonts/Porcine-Bosk.svg#Porcine-Bosk') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Porcine Bosk',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+a{
+  color:wheat;
+}
+body{
+  background-image:url('https://i2.wp.com/www.korosenai.es/wp-content/uploads/2020/07/roca-negra-minecraft.jpg?w=640&ssl=1')
+}
