@@ -11,10 +11,10 @@ const Main = styled.main`
 
 const Layout = ({ children }) => {
   return (
-    <div style={{ backgroundColor: "#fff", width:'80%', margin:'auto' }}>
-      <Header />
+    <div style={{ backgroundColor: "#fff", width: "80%", margin: "auto" }}>
+      {/* <Header /> */}
       <Main>{children}</Main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
