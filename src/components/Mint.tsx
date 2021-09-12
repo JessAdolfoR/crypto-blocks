@@ -31,6 +31,7 @@ const MintButton = styled.button`
   background-color: grey;
   padding: 1rem 4rem;
   font-weight: 900;
+  cursor: pointer;
 `; // add your styles here
 
 export interface HomeProps {
