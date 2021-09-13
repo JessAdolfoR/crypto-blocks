@@ -27,7 +27,7 @@ const Container = styled.div`
   }
 `;
 
-const MintSection = ({
+const Home = ({
   candyMachineId,
   config,
   connection,
@@ -59,4 +59,4 @@ const MintSection = ({
   );
 };
 
-export default MintSection;
+export default Home;
