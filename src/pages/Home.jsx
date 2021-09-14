@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
+//components
+import Grid from "../components/Showcase";
+import HeroSection from "../components/Banner";
 
 const Section = styled.section`
   min-height: 50vh;
@@ -32,17 +35,8 @@ const MintSection = () => {
   return (
     <Section>
       <Container>
-        <h1>Blocks</h1>
-        <p>Just Fucking blocks lol, but fabulous blocks</p>
-        <Link to="/Mint">
-          <button>Mint we xd</button>
-        </Link>
-        <div className="cadre">
-          <div className="show">
-            <img src="https://i.ibb.co/t4HnRHH/Pist-n-pegajoso.gif" alt="" />
-          </div>
-          <div className="border"></div>
-        </div>
+        <HeroSection />
+        <Grid />
       </Container>
     </Section>
   );

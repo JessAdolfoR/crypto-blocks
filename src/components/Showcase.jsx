@@ -15,6 +15,18 @@ const Row = styled.div`
   margin-left: -15px;
 `;
 
+const Title = styled.span`
+  background: rgba(0, 0, 0, 0.9);
+  padding: 6px 20px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  box-shadow: -4px 4px 1px rgb(0 0 0 / 50%);
+  letter-spacing: 0.02em;
+  color: #fff;
+`;
+
 const Col = styled.div`
   flex: 0 0 100%;
   max-width: 100%;
@@ -32,87 +44,44 @@ const Col = styled.div`
   }
 `;
 
-const ColHeader = styled.div`
-  text-align: center;
-  font-weight: 600;
-  border-bottom: 1px solid #ef9a9a;
-  background-color: #ffebee;
-  padding: 5px 10px;
-  width: auto;
-  display: block;
-  margin: 10 auto;
-  border-radius: 5px;
-  border: solid 1px #3d496c;
-  background: #9cb5fe;
-  text-align: center;
-  font-size: 20px;
-  box-shadow: 0px 2px 0px #3d496c;
-  margin-top: 8px;
-`;
-
 const ColMain = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 0 0.5rem;
-  border: 1px solid #9cb5fe;
   border-radius: 4px;
-  margin-top: 10px;
-  background: #9cb5fe;
-`;
-const ColDescripcion = styled.div`
-  font-size: 15px;
-  text-align: center;
-  margin-top: 0.5rem;
-`;
-
-const Img = styled.img`
-  max-width: 150px;
+  width: 245px;
+  height: 160px;
+  border: 4px solid #ccc;
+  display: inline-block;
+  padding: 14px;
+  background-position: center center !important;
+  position: relative;
+  transition: ease 0.5s;
+  background-image: url(https://minecraft.tools/en/css/img/index/03.jpg);
+  background-size: 245px;
+  background-repeat: no-repeat;
 `;
 
 const Grid = () => {
   return (
     <Container>
+      <h1>Showcase</h1>
       <Row>
         <Col>
-          <ColHeader>Yeti Pixel</ColHeader>
           <ColMain>
-            <Img
-              src="https://sollamas.com/attributes/colour/WarPaint.png"
-              alt=""
-            />
-            <ColDescripcion> 97.92%</ColDescripcion>
+            <Title>Title cube</Title>
           </ColMain>
         </Col>
         <Col>
-          <ColHeader>Yeti Pixel</ColHeader>
           <ColMain>
-            <Img
-              src="https://sollamas.com/attributes/colour/WarPaint.png"
-              alt=""
-            />
-            <ColDescripcion> 97.92%</ColDescripcion>
+            <Title>Title cube</Title>
           </ColMain>
         </Col>
         <Col>
-          <ColHeader>Yeti Pixel</ColHeader>
           <ColMain>
-            <Img
-              src="https://sollamas.com/attributes/colour/WarPaint.png"
-              alt=""
-            />
-            <ColDescripcion> 97.92%</ColDescripcion>
+            <Title>Title cube</Title>
           </ColMain>
         </Col>
         <Col>
-          <ColHeader>Yeti Pixel</ColHeader>
           <ColMain>
-            <Img
-              src="https://sollamas.com/attributes/colour/WarPaint.png"
-              alt=""
-            />
-            <ColDescripcion> 97.92%</ColDescripcion>
+            <Title>Title cube</Title>
           </ColMain>
         </Col>
       </Row>
