@@ -84,6 +84,26 @@ const Grid = () => {
             <Title>Title cube</Title>
           </ColMain>
         </Col>
+        <Col>
+          <ColMain>
+            <Title>Title cube</Title>
+          </ColMain>
+        </Col>
+        <Col>
+          <ColMain>
+            <Title>Title cube</Title>
+          </ColMain>
+        </Col>
+        <Col>
+          <ColMain>
+            <Title>Title cube</Title>
+          </ColMain>
+        </Col>
+        <Col>
+          <ColMain>
+            <Title>Title cube</Title>
+          </ColMain>
+        </Col>
       </Row>
     </Container>
   );
