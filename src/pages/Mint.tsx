@@ -45,9 +45,9 @@ const MintContainer = styled.div`
   align-items: center;
 
   button {
-    width: 200px;
+    width: 180px;
     padding: 16px 0;
-    height: 51px;
+    height: 50px;
     border: none;
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
@@ -58,6 +58,7 @@ const MintContainer = styled.div`
   button[disabled] {
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
+    justify-content: center !important;
   }
 `;
 
