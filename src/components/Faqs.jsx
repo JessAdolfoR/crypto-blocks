@@ -68,4 +68,5 @@ const Faqs = ({ data }) => {
     </Section>
   );
 };
+
 export default Faqs;

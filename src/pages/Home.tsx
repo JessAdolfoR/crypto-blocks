@@ -29,6 +29,7 @@ import blocksShowcase from "../images/blocks-showcase.gif";
 import BlockSlider from "../components/BlockSlider";
 import Faqs from "../components/Faqs";
 import { dummyFaqs } from "./faq";
+
 const MainContainer = styled.div`
   max-width: 1280px;
   width: 100%;
