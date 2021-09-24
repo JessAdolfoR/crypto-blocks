@@ -4,7 +4,6 @@ const FooterContainer = styled.footer`
   min-height: 350px;
   padding: 80px 50px 0;
   display: flex;
-  background-image: url(http://pm1.narvii.com/6091/1ab0e31488f05afc7f870f47ce52563a1fbd7d6f_00.jpg);
 `;
 
 const Container = styled.div`
@@ -25,15 +24,13 @@ const Brand = styled.div`
   }
 
   h4 {
-    margin-top: 16px;
+    margin: 16px 0;
     font-size: 24px;
     font-weight: 400;
-    color: #fff;
   }
 
   p {
     font-size: 20px;
-    color: wheat;
     margin-top: 20px;
     line-height: 26px;
   }
@@ -42,11 +39,6 @@ const Brand = styled.div`
     width: auto;
     padding-right: 96px;
     margin-top: 24px;
-
-    h4 {
-      margin-bottom: 16px;
-      color: #fff;
-    }
   }
 
   .footer-list {
@@ -54,10 +46,6 @@ const Brand = styled.div`
 
     li {
       padding: 10px 0;
-    }
-
-    a {
-      color: wheat;
     }
   }
 
@@ -77,11 +65,9 @@ const Copyright = styled.div`
   padding: 24px 0;
   width: 100%;
   margin-top: 66px;
-  border-top: 1px solid #303853;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: wheat;
 
   p,
   a {
@@ -92,7 +78,6 @@ const Copyright = styled.div`
   a {
     text-decoration: none;
     margin-left: 24px;
-    color: wheat;
     display: flex;
 
     img {
@@ -107,11 +92,10 @@ const Footer = () => {
       <Container>
         <Brand>
           <h4>Blocks</h4>
-        </Brand>
-        <Brand>
-          <div className="footer-menu">
-            <h4>Pixel Yetis</h4>
-          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            excepturi officia ipsa ab delectus deserunt?
+          </p>
         </Brand>
         <Brand>
           <div className="footer-menu socials">
@@ -150,7 +134,7 @@ const Footer = () => {
           </div>
         </Brand>
         <Copyright>
-          <p>© 2021 Crypto Blocks</p>
+          <span>© 2021 Crypto Blocks</span>
           <a href="https://solana.com/" target="_blank" rel="noreferrer">
             Built on{" "}
             <img

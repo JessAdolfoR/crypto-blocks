@@ -29,6 +29,7 @@ import blocksShowcase from "../images/blocks-showcase.gif";
 import BlockSlider from "../components/BlockSlider";
 import Faqs from "../components/Faqs";
 import Team from "../components/Team";
+import Footer from "../components/Footer";
 
 const MainContainer = styled.div`
   max-width: 1280px;
@@ -390,6 +391,7 @@ const Home = (props: HomeProps) => {
       <BlockSlider />
       <Team />
       <Faqs />
+      <Footer />
 
       <Snackbar
         open={alertState.open}
