@@ -116,19 +116,23 @@ const RightGrid = styled.div`
 const Mint = styled.div`
   button {
     margin: auto;
-    width: 180px;
-    padding: 16px 0;
+    min-width: 150px;
+    padding: 16px 32px;
     height: 50px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    border-radius: 5px;
+    background-color: #bdeeff;
+    border: 2px solid #224c4c;
+    color: #224c4c;
+    font-weight: 600;
+    border-radius: 3px;
+    font-family: "Porcine Bosk";
     cursor: pointer;
+    letter-spacing: 2px;
   }
 
   button[disabled] {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
+    // background-color: rgba(0, 0, 0, 0.9);
+    background-color: #bdeeff;
+    color: #224c4c;
     justify-content: center !important;
   }
 
@@ -137,9 +141,28 @@ const Mint = styled.div`
   }
 `;
 
-const ConnectButton = styled(WalletMultiButton)``;
+const ConnectButton = styled(WalletMultiButton)`
+  border-radius: 3px;
+  background-color: #bdeeff;
+  border: 2px solid #224c4c;
+  color: #224c4c;
+  font-family: "Porcine Bosk";
 
-const DisconnectButton = styled(WalletDisconnectButton)``;
+  &[disabled] {
+    // background-color: rgba(0, 0, 0, 0.9);
+    background-color: #bdeeff;
+    color: #224c4c;
+    justify-content: center !important;
+  }
+`;
+
+const DisconnectButton = styled(WalletDisconnectButton)`
+  border-radius: 3px;
+  background-color: #bdeeff;
+  border: 2px solid #224c4c;
+  color: #224c4c;
+  font-family: "Porcine Bosk";
+`;
 
 const CounterText = styled.span``;
 
