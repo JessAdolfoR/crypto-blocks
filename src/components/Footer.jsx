@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
@@ -74,8 +73,6 @@ const Brand = styled.div`
   }
 `;
 
-
-
 const Copyright = styled.div`
   padding: 24px 0;
   width: 100%;
@@ -104,7 +101,7 @@ const Copyright = styled.div`
   }
 `;
 
-const TeamSection = () => {
+const Footer = () => {
   return (
     <FooterContainer>
       <Container>
@@ -112,20 +109,12 @@ const TeamSection = () => {
           <h4>Blocks</h4>
         </Brand>
         <Brand>
-        <div className="footer-menu">
+          <div className="footer-menu">
             <h4>Pixel Yetis</h4>
-            <ul className="footer-list">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/gallery">Gallery</Link>
-              </li>
-            </ul>
           </div>
         </Brand>
         <Brand>
-        <div className="footer-menu socials">
+          <div className="footer-menu socials">
             <h4>Social</h4>
             <a
               href="https://solsoulsnft.com/images/social_discord.png"
@@ -176,4 +165,4 @@ const TeamSection = () => {
   );
 };
 
-export default TeamSection;
+export default Footer;

@@ -23,28 +23,99 @@ import {
   shortenAddress,
 } from "../utils/candy-machine";
 
+// Images
+import blocksShowcase from "../images/blocks-showcase.gif";
+import BlockSlider from "../components/BlockSlider";
+
+const MainContainer = styled.div`
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 36px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Header = styled.header`
   width: 100%;
   display: flex;
-  padding: 12px 36px;
+  padding: 50px 0;
   justify-content: flex-end;
   align-items: center;
 `;
 
 const Address = styled.div`
-  padding: 12px 36px;
+  padding: 12px 0px;
+
   p {
     text-align: end;
   }
 `;
 
-const MintContainer = styled.div`
-  padding: 12px 36px;
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+`;
+
+const LeftGrid = styled.div`
+  flex-basis: 100%;
+  max-width: 100%;
+  margin-top: 80px;
+  order: 1;
+
+  h1 {
+    font-size: 120px;
+    margin-bottom: 32px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  .socials {
+    a {
+      display: inline-block;
+    }
+
+    img {
+      width: 50px;
+      margin-right: 8px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    flex-basis: 50%;
+    max-width: 50%;
+    order: unset;
+    margin-top: 0;
+  }
+`;
+
+const RightGrid = styled.div`
+  flex-basis: 100%;
+  max-width: 100%;
+
+  position: relative;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 992px) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+`;
+
+const Mint = styled.div`
   button {
+    margin: auto;
     width: 180px;
     padding: 16px 0;
     height: 50px;
@@ -60,80 +131,9 @@ const MintContainer = styled.div`
     color: #fff;
     justify-content: center !important;
   }
-`;
-
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   @media (min-width: 992px) {
     flex-direction: row;
-  }
-`;
-
-const LeftGrid = styled.div`
-  text-align: center;
-  padding: 1rem;
-  flex-basis: 100%;
-  max-width: 100%;
-  margin-top: 80px;
-
-  order: 1;
-
-  .socials {
-    a {
-      display: inline-block;
-    }
-
-    img {
-      width: 50px;
-      margin-right: 8px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    flex-basis: 66.666%;
-    max-width: 66.666%;
-    order: unset;
-    margin-right: 64px;
-    margin-top: 0;
-  }
-`;
-
-const RightGrid = styled.div`
-  flex-basis: 100%;
-  max-width: 100%;
-
-  padding: 0 20px;
-  position: relative;
-
-  .cadre {
-    width: 100%;
-    position: relative;
-  }
-
-  .show {
-    position: relative;
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 2px solid #000;
-    color: #111;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0 #000;
-    padding: 1rem;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  @media (min-width: 992px) {
-    flex-basis: 33.333%;
-    max-width: 33.333%;
   }
 `;
 
@@ -153,6 +153,16 @@ const MintButton = styled.button`
   }
 `;
 
+const SliderContainer = styled.div`
+  padding: 200px 0 100px;
+
+  h2 {
+    text-align: center;
+    font-size: 64px;
+    margin-bottom: 32px;
+  }
+`;
+
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
   config: anchor.web3.PublicKey;
@@ -162,7 +172,7 @@ export interface HomeProps {
   txTimeout: number;
 }
 
-const Mint = (props: HomeProps) => {
+const Home = (props: HomeProps) => {
   const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
@@ -285,7 +295,7 @@ const Mint = (props: HomeProps) => {
   }, [wallet, props.candyMachineId, props.connection]);
 
   return (
-    <>
+    <MainContainer>
       <Header>
         {wallet ? (
           <DisconnectButton>Disconnet</DisconnectButton>
@@ -300,56 +310,58 @@ const Mint = (props: HomeProps) => {
             <p>Balance: {(balance || 0).toLocaleString()} SOL</p>
           </Address>
         ) : null}
-        <MintContainer>
+        <div>
           <Container>
             <LeftGrid>
-              <h1 style={{ textAlign: "center", fontSize: "2rem" }}>
-                Crypto Blocks
-              </h1>
-              <p>Just a blocks, but fabolous blocks </p>
+              <h1>Crypto Blocks</h1>
+              <h2>500 Blocks on the Solana Blockchain</h2>
+              <p className="description">
+                Blocks description Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Necessitatibus, iusto!
+              </p>
             </LeftGrid>
             <RightGrid>
-              <div className="cadre">
-                <div className="show">
-                  <img
-                    src="https://www.pudgypenguins.io/images/site/home-gif-v2.gif"
-                    alt=""
-                  />
-                </div>
-              </div>
+              <img src={blocksShowcase} alt="blocks showcase" />
             </RightGrid>
           </Container>
-          {wallet ? (
-            <MintButton
-              disabled={isSoldOut || isMinting || !isActive}
-              onClick={onMint}
-            >
-              {isSoldOut ? (
-                "SOLD OUT"
-              ) : isActive ? (
-                isMinting ? (
-                  <CircularProgress
-                    size={32}
-                    thickness={5}
-                    className="spinner"
-                  />
+          <Mint>
+            {wallet ? (
+              <MintButton
+                disabled={isSoldOut || isMinting || !isActive}
+                onClick={onMint}
+              >
+                {isSoldOut ? (
+                  "SOLD OUT"
+                ) : isActive ? (
+                  isMinting ? (
+                    <CircularProgress
+                      size={32}
+                      thickness={5}
+                      className="spinner"
+                    />
+                  ) : (
+                    "MINT"
+                  )
                 ) : (
-                  "MINT"
-                )
-              ) : (
-                <Countdown
-                  date={startDate}
-                  onMount={({ completed }) => completed && setIsActive(true)}
-                  onComplete={() => setIsActive(true)}
-                  renderer={renderCounter}
-                />
-              )}
-            </MintButton>
-          ) : (
-            <ConnectButton />
-          )}
-        </MintContainer>
+                  <Countdown
+                    date={startDate}
+                    onMount={({ completed }) => completed && setIsActive(true)}
+                    onComplete={() => setIsActive(true)}
+                    renderer={renderCounter}
+                  />
+                )}
+              </MintButton>
+            ) : (
+              <ConnectButton />
+            )}
+          </Mint>
+        </div>
       </div>
+
+      <SliderContainer>
+        <h2>Some Blocks</h2>
+        <BlockSlider />
+      </SliderContainer>
 
       <Snackbar
         open={alertState.open}
@@ -363,7 +375,7 @@ const Mint = (props: HomeProps) => {
           {alertState.message}
         </Alert>
       </Snackbar>
-    </>
+    </MainContainer>
   );
 };
 
@@ -381,4 +393,4 @@ const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
   );
 };
 
-export default Mint;
+export default Home;
