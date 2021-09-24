@@ -1,14 +1,46 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-const Section = styled.div`
-  width: 100%;
-  margin: auto;
+export const faqs = [
+  {
+    id: 1,
+    title: "Lorem Impsum",
+    content: "Lorem Ipsum",
+  },
+  {
+    id: 2,
+    title: "Lorem Impsum",
+    content: "Lorem Ipsum",
+  },
+  {
+    id: 3,
+    title: "Lorem Impsum",
+    content: "Lorem Ipsum",
+  },
+  {
+    id: 4,
+    title: "Lorem Impsum",
+    content: "Lorem Ipsum",
+  },
+];
+
+const Section = styled.section`
+  padding: 100px 0 60px;
 
   h2 {
     text-align: center;
+    font-size: 40px;
+    margin-bottom: 64px;
   }
 
+  @media (min-width: 992px) {
+    h2 {
+      font-size: 64px;
+    }
+  }
+`;
+
+const FaqItem = styled.div`
   .sidebar-nav-menu-item {
     display: block;
     margin-bottom: 1rem;
@@ -39,7 +71,7 @@ const Section = styled.div`
   }
 `;
 
-const Faqs = ({ data }) => {
+const Faqs = () => {
   const [activeCollapse, setActiveCollapse] = useState("");
 
   const handleExpandCollaps = (name) => {
@@ -51,20 +83,25 @@ const Faqs = ({ data }) => {
   };
 
   return (
-    <Section className="sidebar-nav">
-      <div className="sidebar-nav-menu">
-        <div
-          className={`sidebar-nav-menu-item ${
-            activeCollapse === data.id ? "item-active" : ""
-          }`}
-          onClick={() => handleExpandCollaps(data.id)}
-        >
-          <div className="sidebar-nav-menu-item-head">
-            <h4 className="question">{data.title}</h4>
+    <Section>
+      <h2>FAQ</h2>
+      {faqs.map((faq) => (
+        <FaqItem className="sidebar-nav">
+          <div className="sidebar-nav-menu">
+            <div
+              className={`sidebar-nav-menu-item ${
+                activeCollapse === faq.id ? "item-active" : ""
+              }`}
+              onClick={() => handleExpandCollaps(faq.id)}
+            >
+              <div className="sidebar-nav-menu-item-head">
+                <h4 className="question">{faq.title}</h4>
+              </div>
+              <div className="sidebar-nav-menu-item-body">{faq.content}</div>
+            </div>
           </div>
-          <div className="sidebar-nav-menu-item-body">{data.content}</div>
-        </div>
-      </div>
+        </FaqItem>
+      ))}
     </Section>
   );
 };

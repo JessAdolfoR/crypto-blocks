@@ -28,23 +28,31 @@ import blocksShowcase from "../images/blocks-showcase.gif";
 //Components
 import BlockSlider from "../components/BlockSlider";
 import Faqs from "../components/Faqs";
-import { dummyFaqs } from "./faq";
+import Team from "../components/Team";
 
 const MainContainer = styled.div`
   max-width: 1280px;
   width: 100%;
-  padding: 0 36px;
+  padding: 0 24px;
   margin: auto;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 992px) {
+    padding: 0 36px;
+  }
 `;
 
 const Header = styled.header`
   width: 100%;
   display: flex;
-  padding: 50px 0;
+  padding: 24px 0;
   justify-content: flex-end;
   align-items: center;
+
+  @media (min-width: 992px) {
+    padding: 50px 0;
+  }
 `;
 
 const Address = styled.div`
@@ -72,7 +80,7 @@ const LeftGrid = styled.div`
   order: 1;
 
   h1 {
-    font-size: 120px;
+    font-size: 64px;
     margin-bottom: 32px;
   }
 
@@ -96,6 +104,17 @@ const LeftGrid = styled.div`
     max-width: 50%;
     order: unset;
     margin-top: 0;
+
+    h1 {
+      font-size: 120px;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: 480px) {
+    h1 {
+      font-size: 80px;
+    }
   }
 `;
 
@@ -110,13 +129,6 @@ const RightGrid = styled.div`
     height: auto;
   }
 
-  @media (min-width: 992px) {
-    flex-basis: 50%;
-    max-width: 50%;
-  }
-`;
-
-const Mint = styled.div`
   button {
     margin: auto;
     min-width: 150px;
@@ -140,7 +152,8 @@ const Mint = styled.div`
   }
 
   @media (min-width: 992px) {
-    flex-direction: row;
+    flex-basis: 50%;
+    max-width: 50%;
   }
 `;
 
@@ -176,16 +189,6 @@ const MintButton = styled.button`
 
   .spinner {
     color: #fff;
-  }
-`;
-
-const SliderContainer = styled.div`
-  padding: 200px 0 100px;
-
-  h2 {
-    text-align: center;
-    font-size: 64px;
-    margin-bottom: 32px;
   }
 `;
 
@@ -348,49 +351,46 @@ const Home = (props: HomeProps) => {
             </LeftGrid>
             <RightGrid>
               <img src={blocksShowcase} alt="blocks showcase" />
+              {wallet ? (
+                <MintButton
+                  disabled={isSoldOut || isMinting || !isActive}
+                  onClick={onMint}
+                >
+                  {isSoldOut ? (
+                    "SOLD OUT"
+                  ) : isActive ? (
+                    isMinting ? (
+                      <CircularProgress
+                        size={32}
+                        thickness={5}
+                        className="spinner"
+                      />
+                    ) : (
+                      "MINT"
+                    )
+                  ) : (
+                    <Countdown
+                      date={startDate}
+                      onMount={({ completed }) =>
+                        completed && setIsActive(true)
+                      }
+                      onComplete={() => setIsActive(true)}
+                      renderer={renderCounter}
+                    />
+                  )}
+                </MintButton>
+              ) : (
+                <ConnectButton>MINT A BLOCK</ConnectButton>
+              )}
             </RightGrid>
           </Container>
-          <Mint>
-            {wallet ? (
-              <MintButton
-                disabled={isSoldOut || isMinting || !isActive}
-                onClick={onMint}
-              >
-                {isSoldOut ? (
-                  "SOLD OUT"
-                ) : isActive ? (
-                  isMinting ? (
-                    <CircularProgress
-                      size={32}
-                      thickness={5}
-                      className="spinner"
-                    />
-                  ) : (
-                    "MINT"
-                  )
-                ) : (
-                  <Countdown
-                    date={startDate}
-                    onMount={({ completed }) => completed && setIsActive(true)}
-                    onComplete={() => setIsActive(true)}
-                    renderer={renderCounter}
-                  />
-                )}
-              </MintButton>
-            ) : (
-              <ConnectButton />
-            )}
-          </Mint>
         </div>
       </div>
 
-      <SliderContainer>
-        <h2>Some Blocks</h2>
-        <BlockSlider />
-      </SliderContainer>
-      {dummyFaqs.map((item) => (
-        <Faqs key={item.id} data={item}></Faqs>
-      ))}
+      <BlockSlider />
+      <Team />
+      <Faqs />
+
       <Snackbar
         open={alertState.open}
         autoHideDuration={6000}
