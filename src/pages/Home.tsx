@@ -25,8 +25,10 @@ import {
 
 // Images
 import blocksShowcase from "../images/blocks-showcase.gif";
+//Components
 import BlockSlider from "../components/BlockSlider";
-
+import Faqs from "../components/Faqs";
+import { dummyFaqs } from "./faq";
 const MainContainer = styled.div`
   max-width: 1280px;
   width: 100%;
@@ -362,7 +364,9 @@ const Home = (props: HomeProps) => {
         <h2>Some Blocks</h2>
         <BlockSlider />
       </SliderContainer>
-
+      {dummyFaqs.map((item) => (
+        <Faqs key={item.id} data={item}></Faqs>
+      ))}
       <Snackbar
         open={alertState.open}
         autoHideDuration={6000}
