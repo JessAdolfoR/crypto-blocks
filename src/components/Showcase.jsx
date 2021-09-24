@@ -34,11 +34,15 @@ const Col = styled.div`
   padding-bottom: 2rem;
   align-items: center;
   flex-direction: column;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     flex: 0 0 33.3%;
     max-width: 33.3%;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @media (min-width: 1280px) {
     flex: 0 0 25%;
     max-width: 25%;
   }
