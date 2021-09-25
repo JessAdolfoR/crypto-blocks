@@ -25,7 +25,7 @@ import {
 
 // Images
 import blocksShowcase from "../images/blocks-showcase.gif";
-import button from "../images/button1.png";
+import button from "../images/button.png";
 //Components
 import BlockSlider from "../components/BlockSlider";
 import Faqs from "../components/Faqs";
@@ -237,7 +237,7 @@ const MintButton = styled.button`
   }
 
   .spinner {
-    color: #fff;
+    color: #224c4c;
   }
 `;
 
