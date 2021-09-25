@@ -63,7 +63,7 @@ const Card = styled.a`
   margin: 0 24px 36px;
   position: relative;
   background-color: #fff;
-
+  border-radius: 5px;
   img {
     width: 100%;
     height: auto;

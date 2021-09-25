@@ -48,13 +48,18 @@ const FaqItem = styled.div`
 
   .question {
     font-size: 24px;
+    color: #224c4c;
+    letter-spacing: 0.1em;
   }
 
   .sidebar-nav-menu-item-head {
     cursor: pointer;
     padding: 10px;
     position: relative;
-    background: #7790da;
+    background: #b4ddef;
+    border: 1px inset #224c4c;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
 
   .sidebar-nav-menu-item-body {
@@ -62,12 +67,20 @@ const FaqItem = styled.div`
     height: 0;
     opacity: 0;
     transition: 0.5s;
+    font-family: "Modern Sans";
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    line-height: 1.4em;
   }
 
   .sidebar-nav-menu-item.item-active .sidebar-nav-menu-item-body {
     height: auto;
     opacity: 1;
     padding: 1rem;
+    background: #367373;
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 `;
 

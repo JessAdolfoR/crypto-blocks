@@ -49,9 +49,30 @@ body {
   transition: 2s;
   transform: scale(1.2);
 }
+.wallet-adapter-modal-wrapper {
+  background: #b4ddef !important;
+  border-radius: 4px !important;
 
+  border: 1px inset #224c4c !important;
+}
+li .wallet-adapter-button {
+  font-family: "Modern Sans" !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.1em !important;
+  border-radius: 4px;
+}
+.wallet-adapter-modal-title {
+  font-family: "Porcine Bosk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  color: #224c4c !important;
+  background-image: url("./images/block06.png") !important;
+}
 .slick-slide {
   transition: 2s;
+}
+.wallet-adapter-modal-list li button {
+  background-color: #367373 !important;
 }
 
 code {
