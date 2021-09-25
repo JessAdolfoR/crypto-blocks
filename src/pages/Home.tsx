@@ -25,6 +25,7 @@ import {
 
 // Images
 import blocksShowcase from "../images/blocks-showcase.gif";
+import button from "../images/button1.png";
 //Components
 import BlockSlider from "../components/BlockSlider";
 import Faqs from "../components/Faqs";
@@ -132,22 +133,34 @@ const RightGrid = styled.div`
 
   button {
     margin: auto;
-    min-width: 150px;
-    padding: 16px 32px;
-    height: 50px;
-    background-color: #bdeeff;
-    border: 2px solid #224c4c;
+    min-width: 165px;
+    height: 55px;
+    background-color: unset;
+    background-image: url(${button});
+    background-size: cover;
+    background-position: center;
     color: #224c4c;
     font-weight: 600;
     border-radius: 3px;
     font-family: "Porcine Bosk";
     cursor: pointer;
     letter-spacing: 2px;
+
+    span {
+      margin-top: -14px;
+    }
+  }
+
+  button:not([disabled]):hover {
+    background-image: url(${button});
+    background-size: cover;
   }
 
   button[disabled] {
-    // background-color: rgba(0, 0, 0, 0.9);
-    background-color: #bdeeff;
+    background-color: unset;
+    background-image: url(${button});
+    background-size: cover;
+    background-position: center;
     color: #224c4c;
     justify-content: center !important;
   }
@@ -159,26 +172,56 @@ const RightGrid = styled.div`
 `;
 
 const ConnectButton = styled(WalletMultiButton)`
+  min-width: 165px;
+  height: 55px;
+  padding: 0;
   border-radius: 3px;
-  background-color: #bdeeff;
-  border: 2px solid #224c4c;
+  background-color: unset;
+  background-image: url(${button});
+  background-size: cover;
+  background-position: center;
   color: #224c4c;
   font-family: "Porcine Bosk";
 
+  span {
+    margin-top: -14px;
+  }
+
+  &:not([disabled]):hover {
+    background-image: url(${button});
+    background-size: cover;
+  }
+
   &[disabled] {
-    // background-color: rgba(0, 0, 0, 0.9);
     background-color: #bdeeff;
+    background-color: unset;
+    background-image: url(${button});
+    background-size: cover;
+    background-position: center;
     color: #224c4c;
     justify-content: center !important;
   }
 `;
 
 const DisconnectButton = styled(WalletDisconnectButton)`
+  min-width: 165px;
+  height: 55px;
   border-radius: 3px;
-  background-color: #bdeeff;
-  border: 2px solid #224c4c;
+  background-color: unset;
+  background-image: url(${button});
+  background-size: cover;
+  background-position: center;
   color: #224c4c;
   font-family: "Porcine Bosk";
+
+  span {
+    margin-top: -14px;
+  }
+
+  &:not([disabled]):hover {
+    background-image: url(${button});
+    background-size: cover;
+  }
 `;
 
 const CounterText = styled.span``;
@@ -187,6 +230,11 @@ const MintButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+
+  span {
+    margin-top: -14px;
+  }
 
   .spinner {
     color: #fff;
@@ -328,9 +376,13 @@ const Home = (props: HomeProps) => {
     <MainContainer>
       <Header>
         {wallet ? (
-          <DisconnectButton>Disconnet</DisconnectButton>
+          <DisconnectButton>
+            <span>Disconnet</span>
+          </DisconnectButton>
         ) : (
-          <ConnectButton />
+          <ConnectButton>
+            <span>Select Wallet</span>
+          </ConnectButton>
         )}
       </Header>
       <div>
@@ -367,7 +419,7 @@ const Home = (props: HomeProps) => {
                         className="spinner"
                       />
                     ) : (
-                      "MINT"
+                      <span>MINT A BlOCK</span>
                     )
                   ) : (
                     <Countdown
@@ -381,7 +433,9 @@ const Home = (props: HomeProps) => {
                   )}
                 </MintButton>
               ) : (
-                <ConnectButton>MINT A BLOCK</ConnectButton>
+                <ConnectButton>
+                  <span>MINT A BlOCK</span>
+                </ConnectButton>
               )}
             </RightGrid>
           </Container>
