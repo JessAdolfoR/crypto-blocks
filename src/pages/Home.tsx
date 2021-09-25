@@ -133,8 +133,8 @@ const RightGrid = styled.div`
 
   button {
     margin: auto;
-    min-width: 165px;
-    height: 55px;
+    min-width: 175px;
+    height: 60px;
     background-color: unset;
     background-image: url(${button});
     background-size: cover;
@@ -146,8 +146,9 @@ const RightGrid = styled.div`
     cursor: pointer;
     letter-spacing: 2px;
 
-    span {
-      margin-top: -14px;
+    span,
+    i {
+      margin-top: -16px;
     }
   }
 
@@ -172,9 +173,8 @@ const RightGrid = styled.div`
 `;
 
 const ConnectButton = styled(WalletMultiButton)`
-  min-width: 165px;
-  height: 55px;
-  padding: 0;
+  min-width: 175px;
+  height: 60px;
   border-radius: 3px;
   background-color: unset;
   background-image: url(${button});
@@ -183,8 +183,9 @@ const ConnectButton = styled(WalletMultiButton)`
   color: #224c4c;
   font-family: "Porcine Bosk";
 
-  span {
-    margin-top: -14px;
+  span,
+  i {
+    margin-top: -16px;
   }
 
   &:not([disabled]):hover {
@@ -204,8 +205,8 @@ const ConnectButton = styled(WalletMultiButton)`
 `;
 
 const DisconnectButton = styled(WalletDisconnectButton)`
-  min-width: 165px;
-  height: 55px;
+  min-width: 175px;
+  height: 60px;
   border-radius: 3px;
   background-color: unset;
   background-image: url(${button});
@@ -214,8 +215,9 @@ const DisconnectButton = styled(WalletDisconnectButton)`
   color: #224c4c;
   font-family: "Porcine Bosk";
 
-  span {
-    margin-top: -14px;
+  span,
+  i {
+    margin-top: -16px;
   }
 
   &:not([disabled]):hover {
@@ -232,8 +234,9 @@ const MintButton = styled.button`
   align-items: center;
   border: none;
 
-  span {
-    margin-top: -14px;
+  span,
+  i {
+    margin-top: -16px;
   }
 
   .spinner {

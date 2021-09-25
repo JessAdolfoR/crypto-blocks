@@ -5,22 +5,26 @@ export const faqs = [
   {
     id: 1,
     title: "Lorem Impsum",
-    content: "Lorem Ipsum",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
   },
   {
     id: 2,
     title: "Lorem Impsum",
-    content: "Lorem Ipsum",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
   },
   {
     id: 3,
     title: "Lorem Impsum",
-    content: "Lorem Ipsum",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
   },
   {
     id: 4,
     title: "Lorem Impsum",
-    content: "Lorem Ipsum",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
   },
 ];
 
@@ -68,7 +72,7 @@ const FaqItem = styled.div`
     opacity: 0;
     transition: 0.5s;
     font-family: "Modern Sans";
-    font-size: 1.3rem;
+    font-size: 20px;
     letter-spacing: 0.06em;
     line-height: 1.4em;
   }
@@ -79,8 +83,8 @@ const FaqItem = styled.div`
     padding: 1rem;
     background: #367373;
     color: #fff;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 `;
 
