@@ -10,10 +10,7 @@ import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 
-import {
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 import {
   CandyMachine,
@@ -27,10 +24,11 @@ import {
 import blocksGif from "../images/blocks/blocks.gif";
 import button from "../images/button.png";
 //Components
+import Header from "../components/Header";
 import DataSquares from "../components/DataSquares";
 import BlockSlider from "../components/BlockSlider";
-import Faqs from "../components/Faqs";
 import Team from "../components/Team";
+import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
 
 const MainContainer = styled.div`
@@ -43,18 +41,6 @@ const MainContainer = styled.div`
 
   @media (min-width: 992px) {
     padding: 0 36px;
-  }
-`;
-
-const Header = styled.header`
-  width: 100%;
-  display: flex;
-  padding: 24px 0;
-  justify-content: flex-end;
-  align-items: center;
-
-  @media (min-width: 992px) {
-    padding: 36px 0;
   }
 `;
 
@@ -129,7 +115,8 @@ const RightGrid = styled.div`
   align-items: center;
 
   img {
-    max-width: 350px;
+    width: 350px;
+    max-width: 100%;
     height: auto;
     padding: 20px;
     margin-bottom: 64px;
@@ -206,28 +193,6 @@ const ConnectButton = styled(WalletMultiButton)`
     background-position: center;
     color: #224c4c;
     justify-content: center !important;
-  }
-`;
-
-const DisconnectButton = styled(WalletDisconnectButton)`
-  min-width: 175px;
-  height: 60px;
-  border-radius: 3px;
-  background-color: unset;
-  background-image: url(${button});
-  background-size: cover;
-  background-position: center;
-  color: #224c4c;
-  font-family: "Porcine Bosk";
-
-  span,
-  i {
-    margin-top: -16px;
-  }
-
-  &:not([disabled]):hover {
-    background-image: url(${button});
-    background-size: cover;
   }
 `;
 
@@ -382,17 +347,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <MainContainer>
-      <Header>
-        {wallet ? (
-          <DisconnectButton>
-            <span>Disconnet</span>
-          </DisconnectButton>
-        ) : (
-          <ConnectButton>
-            <span>Select Wallet</span>
-          </ConnectButton>
-        )}
-      </Header>
+      <Header wallet={wallet} />
       <Address>
         {wallet ? (
           <>

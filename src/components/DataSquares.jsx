@@ -11,11 +11,11 @@ const data = [
   },
   {
     name: "Mint price",
-    value: "1 SOL",
+    value: "TBA",
   },
   {
     name: "Mint price",
-    value: "1 SOL",
+    value: "TBA",
   },
 ];
 
