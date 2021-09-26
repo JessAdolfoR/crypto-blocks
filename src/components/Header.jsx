@@ -1,13 +1,9 @@
 import styled from "styled-components";
-
-import {
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
-
+import { WalletDisconnectButton } from "@solana/wallet-adapter-react-ui";
 // Images
 import logo from "../images/blocks/0.png";
 import button from "../images/button.png";
+import ConnectButton from "./_shared/ConnectButton";
 
 const Navbar = styled.header`
   width: 100%;
@@ -23,38 +19,6 @@ const Navbar = styled.header`
 
   @media (min-width: 992px) {
     padding: 36px 0;
-  }
-`;
-
-const ConnectButton = styled(WalletMultiButton)`
-  min-width: 175px;
-  height: 60px;
-  border-radius: 3px;
-  background-color: unset;
-  background-image: url(${button});
-  background-size: cover;
-  background-position: center;
-  color: #224c4c;
-  font-family: "Porcine Bosk";
-
-  span,
-  i {
-    margin-top: -16px;
-  }
-
-  &:not([disabled]):hover {
-    background-image: url(${button});
-    background-size: cover;
-  }
-
-  &[disabled] {
-    background-color: #bdeeff;
-    background-color: unset;
-    background-image: url(${button});
-    background-size: cover;
-    background-position: center;
-    color: #224c4c;
-    justify-content: center !important;
   }
 `;
 

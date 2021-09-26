@@ -2,13 +2,10 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
-
 import * as anchor from "@project-serum/anchor";
-
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
-
+// Utils
 import {
   CandyMachine,
   awaitTransactionSignatureConfirmation,
