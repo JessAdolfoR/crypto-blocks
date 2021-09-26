@@ -24,9 +24,10 @@ import {
 } from "../utils/candy-machine";
 
 // Images
-import blocksShowcase from "../images/blocks-showcase.gif";
+import blocksGif from "../images/blocks/blocks.gif";
 import button from "../images/button.png";
 //Components
+import DataSquares from "../components/DataSquares";
 import BlockSlider from "../components/BlockSlider";
 import Faqs from "../components/Faqs";
 import Team from "../components/Team";
@@ -53,22 +54,22 @@ const Header = styled.header`
   align-items: center;
 
   @media (min-width: 992px) {
-    padding: 50px 0;
+    padding: 36px 0;
   }
 `;
 
-const Address = styled.div`
-  padding: 12px 0px;
+const Address = styled.section`
+  height: 60px;
 
   p {
     text-align: end;
   }
 `;
 
-const Container = styled.div`
+const Section = styled.section`
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   @media (min-width: 992px) {
     flex-direction: row;
@@ -101,9 +102,15 @@ const LeftGrid = styled.div`
     }
   }
 
+  @media (min-width: 480px) {
+    h1 {
+      font-size: 80px;
+    }
+  }
+
   @media (min-width: 992px) {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 60%;
+    max-width: 60%;
     order: unset;
     margin-top: 0;
 
@@ -112,27 +119,25 @@ const LeftGrid = styled.div`
       margin-bottom: 32px;
     }
   }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 80px;
-    }
-  }
 `;
 
 const RightGrid = styled.div`
   flex-basis: 100%;
   max-width: 100%;
-
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   img {
-    max-width: 100%;
+    max-width: 350px;
     height: auto;
+    padding: 20px;
+    margin-bottom: 64px;
+    background-color: rgba(210, 245, 255, 0.3);
+    border-radius: 5px;
   }
 
   button {
-    margin: auto;
     min-width: 175px;
     height: 60px;
     background-color: unset;
@@ -167,8 +172,8 @@ const RightGrid = styled.div`
   }
 
   @media (min-width: 992px) {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 40%;
+    max-width: 40%;
   }
 `;
 
@@ -388,63 +393,61 @@ const Home = (props: HomeProps) => {
           </ConnectButton>
         )}
       </Header>
-      <div>
+      <Address>
         {wallet ? (
-          <Address>
+          <>
             <p>Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</p>
             <p>Balance: {(balance || 0).toLocaleString()} SOL</p>
-          </Address>
+          </>
         ) : null}
-        <div>
-          <Container>
-            <LeftGrid>
-              <h1>Crypto Blocks</h1>
-              <h2>500 Blocks on the Solana Blockchain</h2>
-              <p className="description">
-                Blocks description Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Necessitatibus, iusto!
-              </p>
-            </LeftGrid>
-            <RightGrid>
-              <img src={blocksShowcase} alt="blocks showcase" />
-              {wallet ? (
-                <MintButton
-                  disabled={isSoldOut || isMinting || !isActive}
-                  onClick={onMint}
-                >
-                  {isSoldOut ? (
-                    "SOLD OUT"
-                  ) : isActive ? (
-                    isMinting ? (
-                      <CircularProgress
-                        size={32}
-                        thickness={5}
-                        className="spinner"
-                      />
-                    ) : (
-                      <span>MINT A BlOCK</span>
-                    )
-                  ) : (
-                    <Countdown
-                      date={startDate}
-                      onMount={({ completed }) =>
-                        completed && setIsActive(true)
-                      }
-                      onComplete={() => setIsActive(true)}
-                      renderer={renderCounter}
-                    />
-                  )}
-                </MintButton>
-              ) : (
-                <ConnectButton>
-                  <span>MINT A BlOCK</span>
-                </ConnectButton>
-              )}
-            </RightGrid>
-          </Container>
-        </div>
-      </div>
+      </Address>
 
+      <Section>
+        <LeftGrid>
+          <h1>Crypto Blocks</h1>
+          <h2>500 Blocks on the Solana Blockchain</h2>
+          <p className="description">
+            Blocks description Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Necessitatibus, iusto!
+          </p>
+        </LeftGrid>
+        <RightGrid>
+          <img src={blocksGif} alt="blocks showcase" />
+          {wallet ? (
+            <MintButton
+              disabled={isSoldOut || isMinting || !isActive}
+              onClick={onMint}
+            >
+              {isSoldOut ? (
+                "SOLD OUT"
+              ) : isActive ? (
+                isMinting ? (
+                  <CircularProgress
+                    size={32}
+                    thickness={5}
+                    className="spinner"
+                  />
+                ) : (
+                  <span>MINT A BlOCK</span>
+                )
+              ) : (
+                <Countdown
+                  date={startDate}
+                  onMount={({ completed }) => completed && setIsActive(true)}
+                  onComplete={() => setIsActive(true)}
+                  renderer={renderCounter}
+                />
+              )}
+            </MintButton>
+          ) : (
+            <ConnectButton>
+              <span>MINT A BlOCK</span>
+            </ConnectButton>
+          )}
+        </RightGrid>
+      </Section>
+
+      <DataSquares />
       <BlockSlider />
       <Team />
       <Faqs />

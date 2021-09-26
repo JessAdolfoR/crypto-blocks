@@ -62,7 +62,7 @@ const Card = styled.a`
   padding: 12px;
   margin: 0 24px 36px;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(210, 245, 255, 0.3);
   border-radius: 5px;
   img {
     width: 100%;
