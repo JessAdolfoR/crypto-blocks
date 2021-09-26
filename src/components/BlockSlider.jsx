@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import Slider from "react-slick";
 // Images
-import block01 from "../images/block01.png";
-import block02 from "../images/block02.png";
-import block03 from "../images/block03.png";
-import block04 from "../images/block04.png";
-import block05 from "../images/block05.png";
-import block06 from "../images/block06.png";
-
+import block01 from "../images/blocks/1.png";
+import block02 from "../images/blocks/2.png";
+import block03 from "../images/blocks/3.png";
+import block04 from "../images/blocks/4.png";
+import block05 from "../images/blocks/5.png";
+import block06 from "../images/blocks/6.png";
+import buttonNext from "../images/button-next.png";
+import buttonPrevius from "../images/button-next-2.png";
 const Section = styled.section`
   padding: 100px 0 60px;
 
@@ -16,21 +17,57 @@ const Section = styled.section`
     font-size: 40px;
     margin-bottom: 64px;
   }
-
+  padding: 4rem;
   @media (min-width: 992px) {
     h2 {
       font-size: 64px;
     }
+    padding: 0;
   }
 `;
 
 const Block = styled.div`
   img {
     max-width: 100%;
+    padding: 25%;
     height: auto;
   }
 `;
+function SampleNextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        display: "block",
+        backgroundImage: `url(${buttonNext})`,
+        right: "-65px",
+        width: "70px",
+        height: "50px",
+        backgroundSize: "cover",
+      }}
+      onClick={onClick}
+    />
+  );
+}
 
+function SamplePrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        display: "block",
+        backgroundImage: `url(${buttonPrevius})`,
+        left: "-82px",
+        width: "70px",
+        height: "50px",
+        backgroundSize: "cover",
+      }}
+      onClick={onClick}
+    />
+  );
+}
 const BlockSlider = () => {
   var settings = {
     className: "center",
@@ -45,6 +82,8 @@ const BlockSlider = () => {
     speed: 2000,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1200,
@@ -58,6 +97,7 @@ const BlockSlider = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          centerPadding: "40px",
         },
       },
 
@@ -66,6 +106,7 @@ const BlockSlider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "0",
         },
       },
     ],
