@@ -9,6 +9,7 @@ import block05 from "../images/blocks/5.png";
 import block06 from "../images/blocks/6.png";
 import buttonNext from "../images/button-next.png";
 import buttonPrevius from "../images/button-next-2.png";
+
 const Section = styled.section`
   padding: 100px 0 60px;
 
@@ -33,6 +34,7 @@ const Block = styled.div`
     height: auto;
   }
 `;
+
 function SampleNextArrow(props) {
   const { className, onClick } = props;
   return (
@@ -42,8 +44,8 @@ function SampleNextArrow(props) {
         display: "block",
         backgroundImage: `url(${buttonNext})`,
         right: "-65px",
-        width: "70px",
-        height: "50px",
+        width: "60px",
+        height: "40px",
         backgroundSize: "cover",
       }}
       onClick={onClick}
@@ -60,8 +62,8 @@ function SamplePrevArrow(props) {
         display: "block",
         backgroundImage: `url(${buttonPrevius})`,
         left: "-82px",
-        width: "70px",
-        height: "50px",
+        width: "60px",
+        height: "40px",
         backgroundSize: "cover",
       }}
       onClick={onClick}
