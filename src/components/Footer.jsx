@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import Twitter from "../images/Twitter.png";
+import Discord from "../images/Discord.png";
 const FooterContainer = styled.footer`
   min-height: 350px;
   padding: 80px 50px 0;
@@ -106,30 +107,14 @@ const Footer = () => {
               rel="noreferrer"
               style={{ marginLeft: -6 }}
             >
-              <img
-                src="https://solsoulsnft.com/images/social_discord.png"
-                alt="discord icon"
-              />
+              <img src={Discord} alt="discord icon" />
             </a>
             <a
               href="https://solsoulsnft.com/images/social_discord.png"
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                src="https://solsoulsnft.com/images/social_telegram.png"
-                alt="telegram icon"
-              />
-            </a>
-            <a
-              href="https://solsoulsnft.com/images/social_discord.png"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="https://solsoulsnft.com/images/social_twitter.png"
-                alt="twitter icon"
-              />
+              <img src={Twitter} alt="twitter icon" />
             </a>
           </div>
         </Brand>
