@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { WalletDisconnectButton } from "@solana/wallet-adapter-react-ui";
 // Images
-import logo from "../images/blocks/0.png";
+import logo from "../images/logo.png";
 import button from "../images/button.png";
 import ConnectButton from "./_shared/ConnectButton";
 
@@ -13,7 +13,7 @@ const Navbar = styled.header`
   align-items: center;
 
   img {
-    max-width: 60px;
+    max-width: 100px;
     height: auto;
   }
 

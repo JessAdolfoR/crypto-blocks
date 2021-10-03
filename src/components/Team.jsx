@@ -1,9 +1,9 @@
 import styled from "styled-components";
 // Images
-import block01 from "../images/block01.png";
-import block02 from "../images/block02.png";
-import block03 from "../images/block03.png";
-import block04 from "../images/block04.png";
+import block01 from "../images/blocks/1.png";
+import block02 from "../images/blocks/2.png";
+import block03 from "../images/blocks/3.png";
+import block04 from "../images/blocks/4.png";
 
 const TEAM = [
   {
