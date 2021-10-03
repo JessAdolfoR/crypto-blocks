@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import block03 from "../images/block03.png";
 export const faqs = [
   {
     id: 1,
@@ -102,7 +101,6 @@ const Faqs = () => {
   return (
     <Section>
       <h2>FAQ</h2>
-      <img src={block03} alt="" />
       {faqs.map((faq) => (
         <FaqItem className="sidebar-nav">
           <div className="sidebar-nav-menu">
