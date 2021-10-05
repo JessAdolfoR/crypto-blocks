@@ -55,7 +55,8 @@ const Card = styled.div`
   border: 4px solid #224c4c7a;
   margin: 0 24px 36px;
   position: relative;
-  background-color: rgba(210, 245, 255);
+  background-color: ${(props) =>
+    props.isBlock ? "#b4ddef" : "rgba(210, 245, 255)"};
   border-radius: 5px;
   margin-bottom: 40px;
   h3 {
@@ -92,7 +93,7 @@ const RoadMap = () => {
       <Container>
         {POINTS.map((point) => (
           <>
-            <Card key={point.title}>
+            <Card isBlock={point.block} key={point.title}>
               <div className="info">
                 <h3>{point.title}</h3>
                 <p>{point.description}</p>
