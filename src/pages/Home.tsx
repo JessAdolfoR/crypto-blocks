@@ -22,7 +22,7 @@ import Team from "../components/Team";
 import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-
+import RoadMap from "../components/RoadMap";
 const MainContainer = styled.div`
   max-width: 1280px;
   width: 100%;
@@ -204,13 +204,19 @@ const Home = (props: HomeProps) => {
         onMint={onMint}
         setIsActive={setIsActive}
       />
-      <section ref={targetRef} className={isVisible ? "xd" : ""}>
+      <section>
         <DataSquares />
       </section>
 
       <BlockSlider />
-      <Team />
+      <section ref={targetRef}>
+        <div className={isVisible ? "xd" : ""}>
+          <Team />
+        </div>
+      </section>
+
       <Faqs />
+      <RoadMap />
       <Footer />
 
       <Snackbar

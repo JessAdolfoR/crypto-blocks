@@ -84,7 +84,18 @@ li .wallet-adapter-button {
 .slick-prev:before {
   content: "";
 }
+.xd {
+  animation: slide-in 0.7s linear;
+}
 
+@keyframes slide-in {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .slick-prev:hover,
 .slick-next:hover {
   transition: 0.3s;

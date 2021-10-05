@@ -19,8 +19,8 @@ const TEAM = [
     avatar: block01,
   },
   {
-    name: "Artist",
-    role: "Artist",
+    name: "Artistxd",
+    role: "Artistxd",
     social: "/",
     avatar: block03,
   },

@@ -71,8 +71,8 @@ const DataSquare = styled.div`
 const DataSquares = () => {
   return (
     <Section>
-      {data.map((d) => (
-        <DataSquare>
+      {data.map((d, index) => (
+        <DataSquare key={index}>
           <h3>{d.value}</h3>
           <h4>{d.name}</h4>
         </DataSquare>

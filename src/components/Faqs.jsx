@@ -101,8 +101,8 @@ const Faqs = () => {
   return (
     <Section>
       <h2>FAQ</h2>
-      {faqs.map((faq) => (
-        <FaqItem className="sidebar-nav">
+      {faqs.map((faq, index) => (
+        <FaqItem className="sidebar-nav" key={`faq-${index}`}>
           <div className="sidebar-nav-menu">
             <div
               className={`sidebar-nav-menu-item ${
