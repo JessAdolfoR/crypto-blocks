@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
@@ -14,7 +14,7 @@ import {
   shortenAddress,
 } from "../utils/candy-machine";
 //Components
-import useElementOnScreen from "../utils/useElementOnScreen";
+// import useElementOnScreen from "../utils/useElementOnScreen";
 import Header from "../components/Header";
 import DataSquares from "../components/DataSquares";
 import BlockSlider from "../components/BlockSlider";
@@ -58,15 +58,15 @@ const Home = (props: HomeProps) => {
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
-  const targetRef = useRef(null);
-  const isVisible = useElementOnScreen(
-    {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    },
-    targetRef
-  );
+  // const targetRef = useRef(null);
+  // const isVisible = useElementOnScreen(
+  //   {
+  //     root: null,
+  //     rootMargin: "0px",
+  //     threshold: 0.3,
+  //   },
+  //   targetRef
+  // );
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
     message: "",
@@ -204,16 +204,10 @@ const Home = (props: HomeProps) => {
         onMint={onMint}
         setIsActive={setIsActive}
       />
-      <section>
-        <DataSquares />
-      </section>
+      <DataSquares />
 
       <BlockSlider />
-      <section ref={targetRef}>
-        <div className={isVisible ? "xd" : ""}>
-          <Team />
-        </div>
-      </section>
+      <Team />
 
       <Faqs />
       <RoadMap />
