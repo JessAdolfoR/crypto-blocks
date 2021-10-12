@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import faqBlock from "../images/block03.png";
 import HomeBlock from "../images/Metal-slug-H.png";
 import TeamBlock from "../images/Triforce.png";
 import CubesBlock from "../images/Exclamation-cube.png";
 import RoadMapBlock from "../images/Enchanting-table.png";
+
 const Section = styled.section`
   position: fixed;
   left: auto;
@@ -12,9 +12,9 @@ const Section = styled.section`
   bottom: 0%;
   z-index: 100;
   display: flex;
-  width: 12%;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 1.2rem;
 `;
 
 const DivContainer = styled.div`
@@ -23,6 +23,7 @@ const DivContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 const Link = styled.a`
   display: flex;
   margin: 0.5rem 0;
@@ -31,12 +32,14 @@ const Link = styled.a`
   line-height: 1.31;
   text-decoration: none;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
 `;
+
 const Img = styled.img`
   width: 3rem;
-  margin-left: auto;
 `;
+
 const Sidebar = () => {
   return (
     <Section>
@@ -49,13 +52,13 @@ const Sidebar = () => {
           <span style={{ marginRight: "1rem" }}> Cubes!</span>
           <Img src={CubesBlock} />
         </Link>
-        <Link href="#faqs">
-          <span style={{ marginRight: "1rem" }}> Faqs</span>
-          <Img src={CubesBlock} />
-        </Link>
         <Link href="#team">
           <span style={{ marginRight: "1rem" }}> Team </span>
           <Img src={TeamBlock} />
+        </Link>
+        <Link href="#faqs">
+          <span style={{ marginRight: "1rem" }}> Faqs</span>
+          <Img src={CubesBlock} />
         </Link>
         <Link href="#roadmap">
           <span style={{ marginRight: "1rem" }}>Roadmap </span>

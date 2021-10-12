@@ -8,7 +8,7 @@ const POINTS = [
     arrow: true,
   },
   {
-    title: "2da Generation",
+    title: "2nd Generation",
     description: "We will bring second generation as soon as possible!",
     arrowDown: true,
   },
