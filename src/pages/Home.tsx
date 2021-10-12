@@ -14,6 +14,7 @@ import {
   shortenAddress,
 } from "../utils/candy-machine";
 //Components
+// import useElementOnScreen from "../utils/useElementOnScreen";
 import Header from "../components/Header";
 import DataSquares from "../components/DataSquares";
 import BlockSlider from "../components/BlockSlider";
@@ -21,7 +22,8 @@ import Team from "../components/Team";
 import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-
+import RoadMap from "../components/RoadMap";
+import Sidebar from "../components/Sidebar";
 const MainContainer = styled.div`
   max-width: 1280px;
   width: 100%;
@@ -57,7 +59,15 @@ const Home = (props: HomeProps) => {
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
-
+  // const targetRef = useRef(null);
+  // const isVisible = useElementOnScreen(
+  //   {
+  //     root: null,
+  //     rootMargin: "0px",
+  //     threshold: 0.3,
+  //   },
+  //   targetRef
+  // );
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
     message: "",
@@ -176,6 +186,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <MainContainer>
+      <Sidebar />
       <Header wallet={wallet} />
       <Address>
         {wallet ? (
@@ -185,21 +196,36 @@ const Home = (props: HomeProps) => {
           </>
         ) : null}
       </Address>
+      <section id="heroCubes">
+        <HeroSection
+          wallet={wallet}
+          isSoldOut={isSoldOut}
+          isMinting={isMinting}
+          isActive={isActive}
+          startDate={startDate}
+          onMint={onMint}
+          setIsActive={setIsActive}
+        />
+      </section>
 
-      <HeroSection
-        wallet={wallet}
-        isSoldOut={isSoldOut}
-        isMinting={isMinting}
-        isActive={isActive}
-        startDate={startDate}
-        onMint={onMint}
-        setIsActive={setIsActive}
-      />
+      <section id="whatcubesdo">
+        <DataSquares />
+      </section>
 
-      <DataSquares />
-      <BlockSlider />
-      <Team />
-      <Faqs />
+      <section id="cubes!">
+        <BlockSlider />
+      </section>
+      <section id="team">
+        <Team />
+      </section>
+
+      <section id="faqs">
+        <Faqs />
+      </section>
+      <section id="roadmap">
+        <RoadMap />
+      </section>
+
       <Footer />
 
       <Snackbar

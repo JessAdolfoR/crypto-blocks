@@ -75,7 +75,6 @@ const RightGrid = styled.div`
     height: auto;
     padding: 20px;
     margin-bottom: 64px;
-    background-color: rgba(210, 245, 255, 0.3);
     border-radius: 5px;
   }
 
