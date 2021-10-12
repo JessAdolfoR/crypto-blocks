@@ -23,6 +23,7 @@ import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import RoadMap from "../components/RoadMap";
+import Sidebar from "../components/Sidebar";
 const MainContainer = styled.div`
   max-width: 1280px;
   width: 100%;
@@ -185,6 +186,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <MainContainer>
+      <Sidebar />
       <Header wallet={wallet} />
       <Address>
         {wallet ? (
@@ -194,23 +196,36 @@ const Home = (props: HomeProps) => {
           </>
         ) : null}
       </Address>
+      <section id="heroCubes">
+        <HeroSection
+          wallet={wallet}
+          isSoldOut={isSoldOut}
+          isMinting={isMinting}
+          isActive={isActive}
+          startDate={startDate}
+          onMint={onMint}
+          setIsActive={setIsActive}
+        />
+      </section>
 
-      <HeroSection
-        wallet={wallet}
-        isSoldOut={isSoldOut}
-        isMinting={isMinting}
-        isActive={isActive}
-        startDate={startDate}
-        onMint={onMint}
-        setIsActive={setIsActive}
-      />
-      <DataSquares />
+      <section id="whatcubesdo">
+        <DataSquares />
+      </section>
 
-      <BlockSlider />
-      <Team />
+      <section id="cubes!">
+        <BlockSlider />
+      </section>
+      <section id="team">
+        <Team />
+      </section>
 
-      <Faqs />
-      <RoadMap />
+      <section id="faqs">
+        <Faqs />
+      </section>
+      <section id="roadmap">
+        <RoadMap />
+      </section>
+
       <Footer />
 
       <Snackbar

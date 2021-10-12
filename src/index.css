@@ -87,7 +87,9 @@ li .wallet-adapter-button {
 .xd {
   animation: slide-in 0.7s linear;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 @keyframes slide-in {
   0% {
     transform: translateX(-1000px);
