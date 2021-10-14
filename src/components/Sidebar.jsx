@@ -3,7 +3,7 @@ import HomeBlock from "../images/Metal-slug-H.png";
 import TeamBlock from "../images/Triforce.png";
 import CubesBlock from "../images/Exclamation-cube.png";
 import RoadMapBlock from "../images/Enchanting-table.png";
-
+import QuestionBlock from '../images/Cubo-Mario-Monedas-512.png'
 const Section = styled.section`
   position: fixed;
   left: auto;
@@ -14,7 +14,10 @@ const Section = styled.section`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 1.2rem;
+  padding-right: 0.8rem;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const DivContainer = styled.div`
@@ -58,7 +61,7 @@ const Sidebar = () => {
         </Link>
         <Link href="#faqs">
           <span style={{ marginRight: "1rem" }}> Faqs</span>
-          <Img src={CubesBlock} />
+          <Img src={QuestionBlock} />
         </Link>
         <Link href="#roadmap">
           <span style={{ marginRight: "1rem" }}>Roadmap </span>

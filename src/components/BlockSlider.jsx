@@ -12,7 +12,6 @@ import buttonPrevius from "../images/button-next-2.png";
 
 const Section = styled.section`
   padding: 100px 0 60px;
-
   h2 {
     text-align: center;
     font-size: 40px;
@@ -23,6 +22,8 @@ const Section = styled.section`
     h2 {
       font-size: 64px;
     }
+    width:85%;
+    margin:auto;
     padding: 0;
   }
 `;
