@@ -1,8 +1,8 @@
 import styled from "styled-components";
 // Images
 import block01 from "../images/blocks/1.png";
-import block02 from "../images/blocks/2.png";
-import block03 from "../images/blocks/3.png";
+import block02 from "../images/blocks/Team-01.png";
+import block03 from "../images/blocks/Team-02.png";
 import block04 from "../images/blocks/4.png";
 
 const TEAM = [
@@ -10,16 +10,16 @@ const TEAM = [
     name: "Aang",
     role: "Founder",
     social: "https://twitter.com/aang_nft",
-    avatar: block02,
-  },
-  {
-    name: "Yisus",
-    role: "Dev",
-    social: "https://twitter.com/",
     avatar: block01,
   },
   {
-    name: "Artistxd",
+    name: "Jess",
+    role: "Dev",
+    social: "https://twitter.com/",
+    avatar: block02,
+  },
+  {
+    name: "Inosuke",
     role: "Artistxd",
     social: "/",
     avatar: block03,
