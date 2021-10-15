@@ -116,7 +116,7 @@ const BlockSlider = () => {
   };
 
   return (
-    <Section>
+    <Section id="cubes!">
       <h2>Some Blocks</h2>
       <Slider {...settings}>
         <div>

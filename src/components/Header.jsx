@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { WalletDisconnectButton } from "@solana/wallet-adapter-react-ui";
 // Images
 import logo from "../images/logo.png";
-import button from "../images/buttons/main-button.png";
-import ConnectButton from "./_shared/ConnectButton";
+import Twitter from "../images/icons/twitter.png";
+import Discord from "../images/icons/discord.png";
 
 const Navbar = styled.header`
   width: 100%;
@@ -22,41 +21,40 @@ const Navbar = styled.header`
   }
 `;
 
-const DisconnectButton = styled(WalletDisconnectButton)`
-  min-width: 175px;
-  height: 60px;
-  border-radius: 3px;
-  background-color: unset;
-  background-image: url(${button});
-  background-size: cover;
-  background-position: center;
-  color: #224c4c;
-  font-family: "Porcine Bosk";
-
-  span,
-  i {
-    margin-top: -16px;
+const Socials = styled.div`
+  a {
+    display: inline-block;
   }
 
-  &:not([disabled]):hover {
-    background-image: url(${button});
-    background-size: cover;
+  img {
+    width: 50px;
+    margin-right: 8px;
   }
 `;
 
-const Header = ({ wallet }) => {
+const Header = () => {
   return (
-    <Navbar>
+    <Navbar id="heroCubes">
       <img src={logo} alt="Crypto Blocks logo" />
-      {wallet ? (
-        <DisconnectButton>
-          <span>Disconnet</span>
-        </DisconnectButton>
-      ) : (
-        <ConnectButton>
-          <span>Select Wallet</span>
-        </ConnectButton>
-      )}
+      <Socials>
+        <div className="footer-menu socials">
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noreferrer"
+            style={{ marginLeft: -6 }}
+          >
+            <img src={Discord} alt="discord icon" />
+          </a>
+          <a
+            href="https://twitter.com/everythingcubic"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Twitter} alt="twitter icon" />
+          </a>
+        </div>
+      </Socials>
     </Navbar>
   );
 };

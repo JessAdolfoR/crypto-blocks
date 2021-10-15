@@ -99,7 +99,7 @@ const Faqs = () => {
   };
 
   return (
-    <Section>
+    <Section id="faqs">
       <h2>FAQ</h2>
       {faqs.map((faq, index) => (
         <FaqItem className="sidebar-nav" key={`faq-${index}`}>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BsTwitter } from "react-icons/bs";
 // Images
 import aangnom from "../images/team/aangnom.png";
 import beet from "../images/team/beet.png";
@@ -82,15 +83,20 @@ const Card = styled.a`
     }
 
     span {
+      display: flex;
       font-family: "Modern Sans";
       font-size: 24px;
+
+      svg {
+        margin-left: 0.5rem;
+      }
     }
   }
 `;
 
 const Team = () => {
   return (
-    <Section>
+    <Section id="team">
       <h2>Team</h2>
       <Container>
         {TEAM.map((member) => (
@@ -103,7 +109,10 @@ const Team = () => {
             <img src={member.avatar} alt="team avatar" />
             <div to={member.social} className="info">
               <h3>{member.role}</h3>
-              <span>{member.name}</span>
+              <span>
+                {member.name}
+                <BsTwitter />
+              </span>
             </div>
           </Card>
         ))}

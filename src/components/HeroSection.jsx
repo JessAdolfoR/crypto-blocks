@@ -1,14 +1,9 @@
 import styled from "styled-components";
-import { CircularProgress } from "@material-ui/core";
-import Countdown from "react-countdown";
-// Components
-import ConnectButton from "./_shared/ConnectButton";
 // Images
 import blocksGif from "../images/cubes/showcase-cubes.gif";
-import button from "../images/buttons/main-button.png";
 
 const Section = styled.section`
-  padding: 60px 0;
+  padding: 100px 0 60px;
   display: flex;
   flex-direction: column;
 
@@ -78,75 +73,13 @@ const RightGrid = styled.div`
     border-radius: 5px;
   }
 
-  button {
-    min-width: 175px;
-    height: 60px;
-    background-color: unset;
-    background-image: url(${button});
-    background-size: cover;
-    background-position: center;
-    color: #224c4c;
-    font-weight: 600;
-    border-radius: 3px;
-    font-family: "Porcine Bosk";
-    cursor: pointer;
-    letter-spacing: 2px;
-
-    span,
-    i {
-      margin-top: -16px;
-    }
-  }
-
-  button:not([disabled]):hover {
-    background-image: url(${button});
-    background-size: cover;
-  }
-
-  button[disabled] {
-    background-color: unset;
-    background-image: url(${button});
-    background-size: cover;
-    background-position: center;
-    color: #224c4c;
-    justify-content: center !important;
-  }
-
   @media (min-width: 992px) {
     flex-basis: 40%;
     max-width: 40%;
   }
 `;
 
-const MintButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-
-  span,
-  i {
-    margin-top: -16px;
-  }
-
-  .spinner {
-    color: #224c4c;
-  }
-`;
-
-const CounterText = styled.span``;
-
-const HeroSection = (props) => {
-  const {
-    wallet,
-    isSoldOut,
-    isMinting,
-    isActive,
-    startDate,
-    onMint,
-    setIsActive,
-  } = props;
-
+const HeroSection = () => {
   return (
     <Section>
       <LeftGrid>
@@ -159,43 +92,8 @@ const HeroSection = (props) => {
       </LeftGrid>
       <RightGrid>
         <img src={blocksGif} alt="blocks showcase" />
-        {wallet ? (
-          <MintButton
-            disabled={isSoldOut || isMinting || !isActive}
-            onClick={onMint}
-          >
-            {isSoldOut ? (
-              "SOLD OUT"
-            ) : isActive ? (
-              isMinting ? (
-                <CircularProgress size={32} thickness={5} className="spinner" />
-              ) : (
-                <span>MINT A BlOCK</span>
-              )
-            ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
-            )}
-          </MintButton>
-        ) : (
-          <ConnectButton>
-            <span>MINT A BlOCK</span>
-          </ConnectButton>
-        )}
       </RightGrid>
     </Section>
-  );
-};
-
-const renderCounter = ({ days, hours, minutes, seconds, completed }) => {
-  return (
-    <CounterText>
-      {days} days {hours} hours, {minutes} minutes, {seconds} seconds
-    </CounterText>
   );
 };
 

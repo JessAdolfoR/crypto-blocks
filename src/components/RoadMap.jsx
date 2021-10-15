@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // Images
 import buttonNext from "../images/buttons/double-chevron.png";
+
 const POINTS = [
   {
     title: "🚀  Wave 3 Launch: 10/3 - 7:30 AM PDT",
@@ -68,6 +69,7 @@ const Card = styled.div`
     margin-left: 20px;
   }
 `;
+
 const Arrow = styled.div`
   position: absolute;
   margin-top: 5%;
@@ -76,10 +78,12 @@ const Arrow = styled.div`
     transform: rotate(90deg);
   }
 `;
+
 const ArrowRight = styled.img`
   max-width: 60px;
   height: 40px;
 `;
+
 const ContainerImg = styled.div`
   display: flex;
   align-items: center;
@@ -87,9 +91,10 @@ const ContainerImg = styled.div`
   margin: 0 24px 36px;
   justify-content: center;
 `;
+
 const RoadMap = () => {
   return (
-    <Section>
+    <Section id="roadmap">
       <h2>Roadmap</h2>
       <Container>
         {POINTS.map((point) => (

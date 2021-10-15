@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import Twitter from "../images/icons/twitter.png";
 import Discord from "../images/icons/discord.png";
 
@@ -36,6 +37,7 @@ const Brand = styled.div`
     margin-top: 20px;
     line-height: 26px;
   }
+
   .footer-menu {
     font-size: 20px;
     width: auto;
@@ -103,7 +105,7 @@ const Footer = () => {
           <div className="footer-menu socials">
             <h4>Social</h4>
             <a
-              href="https://solsoulsnft.com/images/social_discord.png"
+              href="https://discord.com"
               target="_blank"
               rel="noreferrer"
               style={{ marginLeft: -6 }}
@@ -111,7 +113,7 @@ const Footer = () => {
               <img src={Discord} alt="discord icon" />
             </a>
             <a
-              href="https://solsoulsnft.com/images/social_discord.png"
+              href="https://twitter.com/everythingcubic"
               target="_blank"
               rel="noreferrer"
             >
