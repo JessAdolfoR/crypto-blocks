@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 // Images
 import buttonNext from "../images/buttons/double-chevron.png";
@@ -13,13 +14,13 @@ const POINTS = [
     arrowDown: true,
   },
   {
-    title: "Comming Soon",
+    title: "Phase 3",
     description: "Comming Soon",
     block: true,
     arrow: true,
   },
   {
-    title: "Comming Soon",
+    title: "Phase 4",
     description: "Comming Soon",
     block: true,
   },
@@ -92,7 +93,7 @@ const RoadMap = () => {
       <h2>Roadmap</h2>
       <Container>
         {POINTS.map((point) => (
-          <>
+          <React.Fragment key={point.title}>
             <Card isBlock={point.block} key={point.title}>
               <div className="info">
                 <h3>{point.title}</h3>
@@ -106,7 +107,7 @@ const RoadMap = () => {
             {point.arrowDown ? (
               <Arrow>{/* <img src={buttonNext} alt="" /> */}</Arrow>
             ) : null}
-          </>
+          </React.Fragment>
         ))}
       </Container>
     </Section>
