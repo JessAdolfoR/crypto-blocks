@@ -4,8 +4,8 @@ import Countdown from "react-countdown";
 // Components
 import ConnectButton from "./_shared/ConnectButton";
 // Images
-import blocksGif from "../images/blocks/blocks.gif";
-import button from "../images/button.png";
+import blocksGif from "../images/cubes/showcase-cubes.gif";
+import button from "../images/buttons/main-button.png";
 
 const Section = styled.section`
   padding: 60px 0;

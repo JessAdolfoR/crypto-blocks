@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { WalletDisconnectButton } from "@solana/wallet-adapter-react-ui";
 // Images
 import logo from "../images/logo.png";
-import button from "../images/button.png";
+import button from "../images/buttons/main-button.png";
 import ConnectButton from "./_shared/ConnectButton";
 
 const Navbar = styled.header`

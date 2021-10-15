@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // Images
-import buttonNext from "../images/showcase-button.png";
+import buttonNext from "../images/buttons/double-chevron.png";
 const POINTS = [
   {
     title: "🚀  Wave 3 Launch: 10/3 - 7:30 AM PDT",

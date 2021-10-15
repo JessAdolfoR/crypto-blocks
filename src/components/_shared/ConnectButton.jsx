@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 // Images
-import button from "../../images/button.png";
+import button from "../../images/buttons/main-button.png";
 
 const Button = styled(WalletMultiButton)`
   min-width: 175px;

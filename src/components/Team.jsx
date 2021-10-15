@@ -1,34 +1,34 @@
 import styled from "styled-components";
 // Images
-import block01 from "../images/blocks/1.png";
-import block02 from "../images/blocks/2.png";
-import block03 from "../images/blocks/3.png";
-import block04 from "../images/blocks/4.png";
+import aangnom from "../images/team/aangnom.png";
+import beet from "../images/team/beet.png";
+import missHaru from "../images/team/miss-haru.png";
+import gunterine from "../images/team/gunterine.png";
 
 const TEAM = [
   {
-    name: "Aang",
+    name: "Aangnom",
     role: "Founder",
-    social: "https://twitter.com/aang_nft",
-    avatar: block02,
+    social: "https://twitter.com/aangnom",
+    avatar: aangnom,
   },
   {
-    name: "Yisus",
-    role: "Dev",
+    name: "Capt. Beet",
+    role: "Co Founder",
     social: "https://twitter.com/",
-    avatar: block01,
+    avatar: beet,
   },
   {
-    name: "Artistxd",
-    role: "Artistxd",
-    social: "/",
-    avatar: block03,
-  },
-  {
-    name: "Artist",
+    name: "Miss Haru",
     role: "Artist",
-    social: "https://twitter.com/",
-    avatar: block04,
+    social: "/#",
+    avatar: missHaru,
+  },
+  {
+    name: "Gunterine",
+    role: "Artist",
+    social: "#",
+    avatar: gunterine,
   },
 ];
 
@@ -64,19 +64,26 @@ const Card = styled.a`
   position: relative;
   background-color: rgba(210, 245, 255, 0.3);
   border-radius: 5px;
+
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
   img {
     width: 100%;
     height: auto;
   }
 
   .info {
-    padding: 24px 0;
-    display: flex;
-    align-items: center;
+    padding: 24px 16px;
+
+    h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
 
     span {
-      margin-left: 20px;
-      font-size: 32px;
+      font-family: "Modern Sans";
+      font-size: 24px;
     }
   }
 `;
@@ -95,6 +102,7 @@ const Team = () => {
           >
             <img src={member.avatar} alt="team avatar" />
             <div to={member.social} className="info">
+              <h3>{member.role}</h3>
               <span>{member.name}</span>
             </div>
           </Card>

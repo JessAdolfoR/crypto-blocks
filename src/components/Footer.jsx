@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import Twitter from "../images/Twitter.png";
-import Discord from "../images/Discord.png";
+import Twitter from "../images/icons/twitter.png";
+import Discord from "../images/icons/discord.png";
+
 const FooterContainer = styled.footer`
   min-height: 350px;
   padding: 80px 50px 0;

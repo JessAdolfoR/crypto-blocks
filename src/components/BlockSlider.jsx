@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import Slider from "react-slick";
 // Images
-import block01 from "../images/blocks/1.png";
-import block02 from "../images/blocks/2.png";
-import block03 from "../images/blocks/3.png";
-import block04 from "../images/blocks/4.png";
-import block05 from "../images/blocks/5.png";
-import block06 from "../images/blocks/6.png";
-import buttonNext from "../images/button-next.png";
-import buttonPrevius from "../images/button-next-2.png";
+import block01 from "../images/cubes/1.png";
+import block02 from "../images/cubes/2.png";
+import block03 from "../images/cubes/3.png";
+import block04 from "../images/cubes/4.png";
+import block05 from "../images/cubes/5.png";
+import block06 from "../images/cubes/6.png";
+import buttonNext from "../images/buttons/button-next.png";
+import buttonPrevius from "../images/buttons/button-prev.png";
 
 const Section = styled.section`
   padding: 100px 0 60px;
@@ -22,8 +22,8 @@ const Section = styled.section`
     h2 {
       font-size: 64px;
     }
-    width:85%;
-    margin:auto;
+    width: 85%;
+    margin: auto;
     padding: 0;
   }
 `;

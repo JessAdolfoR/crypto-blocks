@@ -29,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #9fbfd1;
-  background-image: url("./images/bg.png");
+  background-image: url("./images/background.png");
   -webkit-animation: background-animation 40s linear infinite;
   animation: move-bg 40s linear infinite;
   font-size: 18px;
