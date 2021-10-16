@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const data = [
   {
-    name: "To be minted",
-    value: "500",
+    name: "To be minted (first batch)",
+    value: "300",
   },
   {
     name: "Launch date",

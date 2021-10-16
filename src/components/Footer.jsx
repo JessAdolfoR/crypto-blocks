@@ -73,7 +73,6 @@ const Copyright = styled.div`
   justify-content: center;
   align-items: center;
 
-  p,
   a {
     font-size: 18px;
     margin-bottom: 0;
@@ -105,7 +104,7 @@ const Footer = () => {
           <div className="footer-menu socials">
             <h4>Social</h4>
             <a
-              href="https://discord.com"
+              href="https://discord.gg/sJksT8msf8"
               target="_blank"
               rel="noreferrer"
               style={{ marginLeft: -6 }}
@@ -122,7 +121,7 @@ const Footer = () => {
           </div>
         </Brand>
         <Copyright>
-          <span>© 2021 Crypto Blocks</span>
+          <span>© 2021 Everything Cubes</span>
           <a href="https://solana.com/" target="_blank" rel="noreferrer">
             Built on{" "}
             <img

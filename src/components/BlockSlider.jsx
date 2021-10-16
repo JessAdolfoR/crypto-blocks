@@ -11,20 +11,21 @@ import buttonNext from "../images/buttons/button-next.png";
 import buttonPrevius from "../images/buttons/button-prev.png";
 
 const Section = styled.section`
-  padding: 100px 0 60px;
   h2 {
     text-align: center;
     font-size: 40px;
     margin-bottom: 64px;
   }
   padding: 4rem;
+
   @media (min-width: 992px) {
     h2 {
       font-size: 64px;
     }
+
     width: 85%;
     margin: auto;
-    padding: 0;
+    padding: 100px 0 60px;
   }
 `;
 

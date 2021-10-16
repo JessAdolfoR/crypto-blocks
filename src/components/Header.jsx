@@ -35,11 +35,11 @@ const Socials = styled.div`
 const Header = () => {
   return (
     <Navbar id="heroCubes">
-      <img src={logo} alt="Crypto Blocks logo" />
+      <img src={logo} alt="Everything Cubes logo" />
       <Socials>
         <div className="footer-menu socials">
           <a
-            href="https://discord.com"
+            href="https://discord.gg/sJksT8msf8"
             target="_blank"
             rel="noreferrer"
             style={{ marginLeft: -6 }}

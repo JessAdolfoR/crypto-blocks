@@ -83,8 +83,8 @@ const HeroSection = () => {
   return (
     <Section>
       <LeftGrid>
-        <h1>Crypto Blocks</h1>
-        <h2>500 Blocks on the Solana Blockchain</h2>
+        <h1>Everything Cubes</h1>
+        <h2>NFT Collection on the Solana Blockchain</h2>
         <p className="description">
           Blocks description Lorem ipsum dolor sit amet consectetur adipisicing
           elit. Necessitatibus, iusto!
