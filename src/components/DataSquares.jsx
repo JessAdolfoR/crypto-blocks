@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 const data = [
   {
-    name: "To be minted (first batch)",
+    name: "To ever exist",
+    value: "1,000",
+  },
+  {
+    name: "To be minted initially",
     value: "300",
   },
   {
-    name: "Launch date",
-    value: "TBA",
-  },
-  {
-    name: "Mint price",
+    name: "Mint date",
     value: "TBA",
   },
   {
@@ -34,7 +34,10 @@ const DataSquare = styled.div`
   flex-direction: column;
   align-items: center;
   border: 4px solid #224c4c7a;
-  background-color: #d2f5ff;
+  background-color: rgba(210, 245, 255, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
   &:last-child {
     margin-right: 0;
@@ -43,11 +46,12 @@ const DataSquare = styled.div`
   h3 {
     font-size: 28px;
     font-weigth: 600;
+    margin-bottom: 6px;
   }
 
   h4 {
     font-size: 16px;
-    color: #224c4c7a;
+    color: #2c5e5e;
     font-family: "Modern Sans";
     text-transform: uppercase;
   }

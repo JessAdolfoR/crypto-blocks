@@ -59,10 +59,12 @@ const FaqItem = styled.div`
     cursor: pointer;
     padding: 10px;
     position: relative;
-    background: #b4ddef;
-    border: 1px inset #224c4c;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    border: 3px solid #224c4c7a;
+    background-color: rgba(210, 245, 255, 0.3);
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.05);
   }
 
   .sidebar-nav-menu-item-body {
@@ -80,8 +82,13 @@ const FaqItem = styled.div`
     height: auto;
     opacity: 1;
     padding: 1rem;
-    background: #367373;
-    color: #fff;
+    background: #b4ddef;
+    color: #224c4c;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom: 3px solid #224c4c7a;
+    border-right: 3px solid #224c4c7a;
+    border-left: 3px solid #224c4c7a;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
   }

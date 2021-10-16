@@ -97,7 +97,7 @@ const Card = styled.a`
 const Team = () => {
   return (
     <Section id="team">
-      <h2>Team</h2>
+      <h2>The Team</h2>
       <Container>
         {TEAM.map((member) => (
           <Card

@@ -4,7 +4,6 @@ import Twitter from "../images/icons/twitter.png";
 import Discord from "../images/icons/discord.png";
 
 const FooterContainer = styled.footer`
-  min-height: 350px;
   padding: 80px 50px 0;
   display: flex;
 `;
@@ -21,6 +20,10 @@ const Container = styled.div`
 
 const Brand = styled.div`
   width: 100%;
+
+  &:first-child {
+    margin-right: 64px;
+  }
 
   @media (min-width: 992px) {
     width: 33%;
@@ -94,11 +97,8 @@ const Footer = () => {
     <FooterContainer>
       <Container>
         <Brand>
-          <h4>Blocks</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            excepturi officia ipsa ab delectus deserunt?
-          </p>
+          <h4>Everything Cubes</h4>
+          <p>The cubiest NFT collection. Built with love on Solana.</p>
         </Brand>
         <Brand>
           <div className="footer-menu socials">
@@ -123,7 +123,6 @@ const Footer = () => {
         <Copyright>
           <span>© 2021 Everything Cubes</span>
           <a href="https://solana.com/" target="_blank" rel="noreferrer">
-            Built on{" "}
             <img
               src="https://solsoulsnft.com/images/solana-sol-logo.svg"
               alt="solana icon"

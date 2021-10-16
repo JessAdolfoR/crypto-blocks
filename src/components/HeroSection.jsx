@@ -84,10 +84,9 @@ const HeroSection = () => {
     <Section>
       <LeftGrid>
         <h1>Everything Cubes</h1>
-        <h2>NFT Collection on the Solana Blockchain</h2>
+        <h2>The cubiest NFT collection</h2>
         <p className="description">
-          Blocks description Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Necessitatibus, iusto!
+          1,000 Unique hand-drawn NFT Cubes on the Solana Blockchain.
         </p>
       </LeftGrid>
       <RightGrid>
