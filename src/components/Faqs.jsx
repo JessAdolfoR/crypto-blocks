@@ -2,28 +2,40 @@ import { useState } from "react";
 import styled from "styled-components";
 export const faqs = [
   {
-    id: 1,
-    title: "Lorem Impsum",
+    id: 0,
+    title: "What is the total supply?",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
+      "There will be a maximum of 1000 cubes, which will be reached gradually in multiple stages.",
+  },
+  {
+    id: 1,
+    title: "What are the stages for minting?",
+    content:
+      "300 to be minted initially through candy machine. 300 more later, also through candy machine. The remaining 400 will be released over the course of time through collabs with different artists and projects, airdrops, auctions, giveaways and special events.",
   },
   {
     id: 2,
-    title: "Lorem Impsum",
+    title: "How do I mint a cube?",
     content:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
   },
   {
     id: 3,
-    title: "Lorem Impsum",
+    title: "What is the mint date?",
     content:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
   },
   {
     id: 4,
-    title: "Lorem Impsum",
+    title: "What wallets will we support?",
     content:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
+  },
+  {
+    id: 5,
+    title: "Will there be resale royalties?",
+    content:
+      "5% royalties will be applied to all Cube resales. We will be using these funds for future development.",
   },
 ];
 
