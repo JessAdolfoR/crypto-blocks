@@ -11,31 +11,37 @@ export const faqs = [
     id: 1,
     title: "What are the stages for minting?",
     content:
-      "300 to be minted initially through candy machine. 300 more later, also through candy machine. The remaining 400 will be released over the course of time through collabs with different artists and projects, airdrops, auctions, giveaways and special events.",
+      "300 to be minted on the first drop. 300 more later this year. The remaining 400 will be released over the course of the following years through collabs with different artists and projects, airdrops, auctions, giveaways and special events.",
   },
   {
     id: 2,
-    title: "How do I mint a cube?",
+    title: "Is there a Tungsten Cube in this collection?",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
+      "Yes there is! And it will be redeemable for a real Tungste Cube :D",
   },
   {
     id: 3,
     title: "What is the mint date?",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
+      "To be announced soon on Twitter and Discord. Be sure to follow us so you don't miss out!",
   },
   {
     id: 4,
-    title: "What wallets will we support?",
+    title: "How much will the mint cost?",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. In cum nisi libero voluptatum? Unde, itaque!",
+      "To be announced soon. It will be quite affordable leaving room for price discovery.",
   },
   {
     id: 5,
+    title: "What wallets will we support?",
+    content:
+      "We recommend Phantom wallet. You can can also use Solflare or Sollet.",
+  },
+  {
+    id: 6,
     title: "Will there be resale royalties?",
     content:
-      "5% royalties will be applied to all Cube resales. We will be using these funds for future development.",
+      "5% royalties will be applied to all Cube resales. We will be using these funds for future development and promotion.",
   },
 ];
 

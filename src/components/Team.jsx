@@ -16,19 +16,19 @@ const TEAM = [
   {
     name: "Capt. Beet",
     role: "Co Founder",
-    social: "https://twitter.com/",
+    social: "https://twitter.com/BeetCaptain",
     avatar: beet,
   },
   {
     name: "Miss Haru",
     role: "Artist",
-    social: "/#",
+    social: "https://twitter.com/MissHaru28",
     avatar: missHaru,
   },
   {
     name: "Gunterine",
     role: "Artist",
-    social: "#",
+    social: "",
     avatar: gunterine,
   },
 ];
@@ -56,7 +56,45 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Card = styled.a`
+const CardLink = styled.a`
+  display: block;
+  flex-basis: 240px;
+  max-width: 240px;
+  padding: 12px;
+  margin: 0 24px 36px;
+  position: relative;
+  background-color: rgba(210, 245, 255, 0.3);
+  border-radius: 5px;
+
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    padding: 24px 16px;
+
+    h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    span {
+      display: flex;
+      font-family: "Modern Sans";
+      font-size: 24px;
+
+      svg {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+`;
+
+const Card = styled.div`
   display: block;
   flex-basis: 240px;
   max-width: 240px;
@@ -99,23 +137,33 @@ const Team = () => {
     <Section id="team">
       <h2>The Team</h2>
       <Container>
-        {TEAM.map((member) => (
-          <Card
-            key={member.name}
-            href={member.social}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={member.avatar} alt="team avatar" />
-            <div to={member.social} className="info">
-              <h3>{member.role}</h3>
-              <span>
-                {member.name}
-                <BsTwitter />
-              </span>
-            </div>
-          </Card>
-        ))}
+        {TEAM.map((member) =>
+          member.social ? (
+            <CardLink
+              key={member.name}
+              href={member.social}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={member.avatar} alt="team avatar" />
+              <div to={member.social} className="info">
+                <h3>{member.role}</h3>
+                <span>
+                  {member.name}
+                  <BsTwitter />
+                </span>
+              </div>
+            </CardLink>
+          ) : (
+            <Card key={member.name}>
+              <img src={member.avatar} alt="team avatar" />
+              <div to={member.social} className="info">
+                <h3>{member.role}</h3>
+                <span>{member.name}</span>
+              </div>
+            </Card>
+          )
+        )}
       </Container>
     </Section>
   );
