@@ -1,35 +1,30 @@
 import styled from "styled-components";
 import { BsTwitter } from "react-icons/bs";
-// Images
-import aangnom from "../images/team/aangnom.png";
-import beet from "../images/team/beet.png";
-import missHaru from "../images/team/miss-haru.png";
-import gunterine from "../images/team/gunterine.png";
 
 const TEAM = [
   {
     name: "Aangnom",
     role: "Founder",
     social: "https://twitter.com/aangnom",
-    avatar: aangnom,
+    avatar: "https://i.ibb.co/P138zYG/aangnom.png",
   },
   {
     name: "Capt. Beet",
     role: "Co Founder",
-    social: "https://twitter.com/BeetCaptain",
-    avatar: beet,
+    social: "https://twitter.com/captbeet",
+    avatar: "https://i.ibb.co/b2HvfvK/beet.png",
   },
   {
     name: "Miss Haru",
     role: "Artist",
     social: "https://twitter.com/MissHaru28",
-    avatar: missHaru,
+    avatar: "https://i.ibb.co/GPgRPrP/gunterine.png",
   },
   {
     name: "Gunterine",
     role: "Artist",
     social: "",
-    avatar: gunterine,
+    avatar: "https://i.ibb.co/XDQc5MF/miss-haru.png",
   },
 ];
 

@@ -1,6 +1,4 @@
 import styled from "styled-components";
-// Images
-import blocksGif from "../images/cubes/showcase-cubes.gif";
 
 const Section = styled.section`
   padding: 80px 0 50px;
@@ -91,7 +89,10 @@ const HeroSection = () => {
         </p>
       </LeftGrid>
       <RightGrid>
-        <img src={blocksGif} alt="blocks showcase" />
+        <img
+          src="https://i.ibb.co/pXJCwDz/showcase-cubes.gif"
+          alt="blocks showcase"
+        />
       </RightGrid>
     </Section>
   );

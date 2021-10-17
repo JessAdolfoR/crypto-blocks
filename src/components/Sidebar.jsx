@@ -1,9 +1,4 @@
 import styled from "styled-components";
-import HomeBlock from "../images/menu-cubes/h.png";
-import TeamBlock from "../images/menu-cubes/triforce.png";
-import CubesBlock from "../images/menu-cubes/exclamation-mark.png";
-import RoadMapBlock from "../images/menu-cubes/enchanting-table.png";
-import QuestionBlock from "../images/menu-cubes/question-mark.png";
 
 const Section = styled.section`
   display: none;
@@ -55,23 +50,23 @@ const Sidebar = () => {
       <DivContainer>
         <Link href="#heroCubes">
           <span>Home</span>
-          <Img src={HomeBlock} />
+          <Img src="https://i.ibb.co/3cjL9s1/h.png" />
         </Link>
         <Link href="#cubes!">
           <span>Cubes!</span>
-          <Img src={CubesBlock} />
+          <Img src="https://i.ibb.co/wY6tL0Y/exclamation-mark.png" />
         </Link>
         <Link href="#team">
           <span>Team</span>
-          <Img src={TeamBlock} />
+          <Img src="https://i.ibb.co/hFKbcG0/triforce.png" />
         </Link>
         <Link href="#faqs">
           <span>Faqs</span>
-          <Img src={QuestionBlock} />
+          <Img src="https://i.ibb.co/b371ZWY/question-mark.png" />
         </Link>
         <Link href="#roadmap">
           <span>Roadmap</span>
-          <Img src={RoadMapBlock} />
+          <Img src="https://i.ibb.co/1dPjM2h/enchanting-table.png" />
         </Link>
       </DivContainer>
     </Section>

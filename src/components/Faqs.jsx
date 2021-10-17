@@ -19,7 +19,7 @@ export const faqs = [
     id: 2,
     title: "Is there a Tungsten Cube in this collection?",
     content:
-      "Yes there is! And it will be redeemable for a real Tungste Cube :D",
+      "Yes there is! And it will be redeemable for a real Tungsten Cube :D",
   },
   {
     id: 3,

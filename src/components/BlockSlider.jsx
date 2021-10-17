@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import Slider from "react-slick";
 // Images
-import block01 from "../images/cubes/1.png";
-import block02 from "../images/cubes/2.png";
-import block03 from "../images/cubes/3.png";
-import block04 from "../images/cubes/4.png";
-import block05 from "../images/cubes/5.png";
-import block06 from "../images/cubes/6.png";
 import buttonNext from "../images/buttons/button-next.png";
 import buttonPrevius from "../images/buttons/button-prev.png";
+// Utils
+import { cubes } from "../utils/cubes";
 
 const Section = styled.section`
   h2 {
@@ -85,8 +81,8 @@ const BlockSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
+    speed: 1000,
+    autoplaySpeed: 1500,
     cssEase: "linear",
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -122,36 +118,13 @@ const BlockSlider = () => {
     <Section id="cubes!">
       <h2>The cubes</h2>
       <Slider {...settings}>
-        <div>
-          <Block>
-            <img src={block01} alt="" />
-          </Block>
-        </div>
-        <div>
-          <Block>
-            <img src={block02} alt="" />
-          </Block>
-        </div>
-        <div>
-          <Block>
-            <img src={block03} alt="" />
-          </Block>
-        </div>
-        <div>
-          <Block>
-            <img src={block04} alt="" />
-          </Block>
-        </div>
-        <div>
-          <Block>
-            <img src={block05} alt="" />
-          </Block>
-        </div>
-        <div>
-          <Block>
-            <img src={block06} alt="" />
-          </Block>
-        </div>
+        {cubes.map((cube) => (
+          <div key={cube.id}>
+            <Block>
+              <img src={cube.image} alt="" />
+            </Block>
+          </div>
+        ))}
       </Slider>
     </Section>
   );
