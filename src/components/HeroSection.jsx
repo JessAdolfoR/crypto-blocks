@@ -90,7 +90,7 @@ const HeroSection = () => {
       </LeftGrid>
       <RightGrid>
         <img
-          src="https://i.ibb.co/pXJCwDz/showcase-cubes.gif"
+          src="https://i.ibb.co/1XYRR2K/cubes-show.gif"
           alt="blocks showcase"
         />
       </RightGrid>

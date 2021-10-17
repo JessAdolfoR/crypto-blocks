@@ -8,6 +8,10 @@ export const cubes = [
     image: "https://i.ibb.co/QJZ82kD/tungsten.png",
   },
   {
+    id: 48,
+    image: "https://i.ibb.co/r3kqLWB/sand-crab.png",
+  },
+  {
     id: 51,
     image: "https://i.ibb.co/t3LswwN/sushi-roll.png",
   },
@@ -167,7 +171,6 @@ export const cubes = [
     id: 6,
     image: "https://i.ibb.co/z8CL7bc/crate-5.png",
   },
-
   {
     id: 34,
     image: "https://i.ibb.co/S6jCpnJ/magma.png",
@@ -201,6 +204,10 @@ export const cubes = [
     image: "https://i.ibb.co/XjLGS7N/pink-quartz.png",
   },
   {
+    id: 40,
+    image: "https://i.ibb.co/0CW8Kxb/biohazard.png",
+  },
+  {
     id: 42,
     image: "https://i.ibb.co/kGZc9n4/purple-crystal.png",
   },
@@ -219,6 +226,10 @@ export const cubes = [
   {
     id: 49,
     image: "https://i.ibb.co/cwCN2Vw/snow.png",
+  },
+  {
+    id: 49,
+    image: "https://i.ibb.co/1d8Sh6c/adamantium.png",
   },
   {
     id: 59,
@@ -246,6 +257,6 @@ export const cubes = [
   },
   {
     id: 48,
-    image: "https://i.ibb.co/r3kqLWB/sand-crab.png",
+    image: "https://i.ibb.co/C7TZZKX/bismuth.png",
   },
 ];
