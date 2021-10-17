@@ -5,38 +5,53 @@ import buttonNext from "../images/buttons/double-chevron.png";
 
 const POINTS = [
   {
-    title: "🚀  Wave 3 Launch: 10/3 - 7:30 AM PDT",
-    description: "300 cubes available for mint",
+    title: "First stage of minting",
+    description: "300 cubes available for minting via candy machine.",
     arrow: true,
   },
   {
-    title: "2nd Generation",
-    description: "We will bring second generation as soon as possible!",
+    title: "Feature other artists and do collabs",
+    description:
+      "Encourage independent artists from the community and artists from other projects to be featured in the collection.",
     arrowDown: true,
   },
   {
-    title: "Phase 3",
-    description: "Comming Soon",
+    title: "Second stage of minting",
+    description:
+      "300 more cubes, including featured cubes, available for minting (via candy machine or fair launch protocol).",
     block: true,
     arrow: true,
   },
   {
-    title: "Phase 4",
-    description: "Comming Soon",
+    title: "Release NFT Gallery",
+    description:
+      "A custom UI to display your NFTs and share them with the community.",
     block: true,
+  },
+  {
+    title: "Keep growing",
+    description:
+      "Release cubes at a much slower pace through collabs with different artists and projects, auctions, airdrops, giveaways and special events.",
   },
 ];
 
 const Section = styled.section`
-  padding: 100px 0 60px;
+  padding: 80px 0 50px;
 
   h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 64px;
   }
 
+  @media (min-width: 480px) {
+    h2 {
+      font-size: 64px;
+    }
+  }
+
   @media (min-width: 992px) {
+    padding: 100px 0 60px;
     h2 {
       font-size: 64px;
     }
@@ -51,9 +66,9 @@ const Container = styled.div`
 `;
 
 const Card = styled.div`
-  flex-basis: 390px;
-  max-width: 390px;
-  padding: 12px;
+  flex-basis: 420px;
+  max-width: 420px;
+  padding: 20px;
   border: 4px solid #224c4c7a;
   margin: 0 24px 36px;
   position: relative;
@@ -61,12 +76,10 @@ const Card = styled.div`
     props.isBlock ? "#b4ddef" : "rgba(210, 245, 255)"};
   border-radius: 5px;
   margin-bottom: 40px;
+
   h3 {
-    margin-left: 20px;
+    margin-bottom: 12px;
     font-size: 25px;
-  }
-  p {
-    margin-left: 20px;
   }
 `;
 
@@ -109,9 +122,7 @@ const RoadMap = () => {
               {point.arrow ? <ArrowRight src={buttonNext} alt="" /> : null}
             </ContainerImg>
 
-            {point.arrowDown ? (
-              <Arrow>{/* <img src={buttonNext} alt="" /> */}</Arrow>
-            ) : null}
+            {point.arrowDown ? <Arrow /> : null}
           </React.Fragment>
         ))}
       </Container>

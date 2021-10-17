@@ -13,16 +13,18 @@ import buttonPrevius from "../images/buttons/button-prev.png";
 const Section = styled.section`
   h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 64px;
   }
   padding: 4rem;
 
-  @media (min-width: 992px) {
+  @media (min-width: 480px) {
     h2 {
       font-size: 64px;
     }
+  }
 
+  @media (min-width: 992px) {
     width: 85%;
     margin: auto;
     padding: 100px 0 60px;

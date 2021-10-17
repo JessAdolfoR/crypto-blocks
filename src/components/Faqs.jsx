@@ -11,7 +11,9 @@ export const faqs = [
     id: 1,
     title: "What are the stages for minting?",
     content:
-      "300 to be minted on the first drop. 300 more later this year. The remaining 400 will be released over the course of the following years through collabs with different artists and projects, airdrops, auctions, giveaways and special events.",
+      "300 to be minted on the first drop. 300 more later this year. And since we want this to be a growing collection for a long time, the remaining 400 will be released over the course of the following years through collabs with different artists and projects, auctions, airdrops, giveaways and special events.",
+    content2:
+      "There are always more ideas to be made into cubes! But we'll stop and the collection will be finished when we reach the thousandth cube :')",
   },
   {
     id: 2,
@@ -46,15 +48,22 @@ export const faqs = [
 ];
 
 const Section = styled.section`
-  padding: 100px 0 60px;
+  padding: 80px 0 50px;
 
   h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 64px;
   }
 
+  @media (min-width: 480px) {
+    h2 {
+      font-size: 64px;
+    }
+  }
+
   @media (min-width: 992px) {
+    padding: 100px 0 60px;
     h2 {
       font-size: 64px;
     }
@@ -94,6 +103,10 @@ const FaqItem = styled.div`
     font-size: 20px;
     letter-spacing: 0.06em;
     line-height: 1.4em;
+
+    .content-2 {
+      margin-top: 24px;
+    }
   }
 
   .sidebar-nav-menu-item.item-active .sidebar-nav-menu-item-body {
@@ -138,7 +151,12 @@ const Faqs = () => {
               <div className="sidebar-nav-menu-item-head">
                 <h4 className="question">{faq.title}</h4>
               </div>
-              <div className="sidebar-nav-menu-item-body">{faq.content}</div>
+              <div className="sidebar-nav-menu-item-body">
+                <p>{faq.content}</p>
+                {faq.content2 ? (
+                  <p className="content-2">{faq.content2}</p>
+                ) : null}
+              </div>
             </div>
           </div>
         </FaqItem>

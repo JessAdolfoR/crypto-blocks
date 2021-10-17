@@ -4,8 +4,12 @@ import Twitter from "../images/icons/twitter.png";
 import Discord from "../images/icons/discord.png";
 
 const FooterContainer = styled.footer`
-  padding: 80px 50px 0;
+  padding: 30px 50px 0;
   display: flex;
+
+  @media (min-width: 992px) {
+    padding: 80px 50px 0;
+  }
 `;
 
 const Container = styled.div`
@@ -107,7 +111,6 @@ const Footer = () => {
               href="https://discord.gg/sJksT8msf8"
               target="_blank"
               rel="noreferrer"
-              style={{ marginLeft: -6 }}
             >
               <img src={Discord} alt="discord icon" />
             </a>

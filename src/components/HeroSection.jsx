@@ -3,19 +3,20 @@ import styled from "styled-components";
 import blocksGif from "../images/cubes/showcase-cubes.gif";
 
 const Section = styled.section`
-  padding: 100px 0 60px;
+  padding: 80px 0 50px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: 992px) {
     flex-direction: row;
+    padding: 100px 0 60px;
   }
 `;
 
 const LeftGrid = styled.div`
   flex-basis: 100%;
   max-width: 100%;
-  margin-top: 80px;
+  margin-top: 0;
   order: 1;
 
   h1 {
@@ -48,7 +49,6 @@ const LeftGrid = styled.div`
     flex-basis: 60%;
     max-width: 60%;
     order: unset;
-    margin-top: 0;
 
     h1 {
       font-size: 120px;

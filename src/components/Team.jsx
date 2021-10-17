@@ -34,18 +34,22 @@ const TEAM = [
 ];
 
 const Section = styled.section`
-  padding: 100px 0 60px;
+  padding: 80px 0 50px;
 
   h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 64px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 480px) {
     h2 {
       font-size: 64px;
     }
+  }
+
+  @media (min-width: 992px) {
+    padding: 100px 0 60px;
   }
 `;
 
