@@ -18,13 +18,13 @@ const TEAM = [
     name: "Miss Haru",
     role: "Artist",
     social: "https://twitter.com/MissHaru28",
-    avatar: "https://i.ibb.co/GPgRPrP/gunterine.png",
+    avatar: "https://i.ibb.co/XDQc5MF/miss-haru.png",
   },
   {
     name: "Gunterine",
     role: "Artist",
     social: "",
-    avatar: "https://i.ibb.co/XDQc5MF/miss-haru.png",
+    avatar: "https://i.ibb.co/GPgRPrP/gunterine.png",
   },
 ];
 
