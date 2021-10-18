@@ -28,11 +28,6 @@ const POINTS = [
       "A custom UI to display your NFTs and share them with the community.",
     block: true,
   },
-  {
-    title: "Keep growing",
-    description:
-      "Release cubes at a much slower pace through collabs with different artists and projects, auctions, airdrops, giveaways and special events.",
-  },
 ];
 
 const Section = styled.section`

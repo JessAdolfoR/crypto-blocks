@@ -3,7 +3,7 @@ import styled from "styled-components";
 const data = [
   {
     name: "To ever exist",
-    value: "1,000",
+    value: "600",
   },
   {
     name: "To be minted initially",

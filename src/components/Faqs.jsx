@@ -5,42 +5,34 @@ export const faqs = [
     id: 0,
     title: "What is the total supply?",
     content:
-      "There will be a maximum of 1000 cubes, which will be reached gradually in multiple stages.",
+      "There will be a maximum of 600 cubes, which will be minted in two stages of 300 each.",
   },
   {
     id: 1,
-    title: "What are the stages for minting?",
-    content:
-      "300 to be minted on the first drop. 300 more later this year. And since we want this to be a growing collection for a long time, the remaining 400 will be released over the course of the following years through collabs with different artists and projects, auctions, airdrops, giveaways and special events.",
-    content2:
-      "There are always more ideas to be made into cubes! But we'll stop and the collection will be finished when we reach the thousandth cube :')",
-  },
-  {
-    id: 2,
     title: "Is there a Tungsten Cube in this collection?",
     content:
       "Yes there is! And it will be redeemable for a real Tungsten Cube :D",
   },
   {
-    id: 3,
+    id: 2,
     title: "What is the mint date?",
     content:
       "To be announced soon on Twitter and Discord. Be sure to follow us so you don't miss out!",
   },
   {
-    id: 4,
+    id: 3,
     title: "How much will the mint cost?",
     content:
       "To be announced soon. It will be quite affordable leaving room for price discovery.",
   },
   {
-    id: 5,
+    id: 4,
     title: "What wallets will we support?",
     content:
       "We recommend Phantom wallet. You can can also use Solflare or Sollet.",
   },
   {
-    id: 6,
+    id: 5,
     title: "Will there be resale royalties?",
     content:
       "5% royalties will be applied to all Cube resales. We will be using these funds for future development and promotion.",
@@ -103,10 +95,6 @@ const FaqItem = styled.div`
     font-size: 20px;
     letter-spacing: 0.06em;
     line-height: 1.4em;
-
-    .content-2 {
-      margin-top: 24px;
-    }
   }
 
   .sidebar-nav-menu-item.item-active .sidebar-nav-menu-item-body {
@@ -153,9 +141,6 @@ const Faqs = () => {
               </div>
               <div className="sidebar-nav-menu-item-body">
                 <p>{faq.content}</p>
-                {faq.content2 ? (
-                  <p className="content-2">{faq.content2}</p>
-                ) : null}
               </div>
             </div>
           </div>

@@ -84,8 +84,8 @@ const HeroSection = () => {
         <h1>Everything Cubes</h1>
         <h2>The cubiest NFT collection</h2>
         <p className="description">
-          1,000 Unique hand-drawn NFT Cubes on the Solana Blockchain. One of
-          them being a Tungsten Cube redeemable for a real cube.
+          600 Unique hand-drawn NFT Cubes on the Solana Blockchain. One of them
+          redeemable for a real tungsten cube.
         </p>
       </LeftGrid>
       <RightGrid>
